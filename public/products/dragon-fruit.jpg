@@ -1,0 +1,13 @@
+<svg width="400" height="320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dragon-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB6C1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF69B4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="320" fill="url(#dragon-gradient)"/>
+  <text x="50%" y="45%" font-family="Arial, sans-serif" font-size="64" font-weight="bold" text-anchor="middle" dominant-baseline="middle">🐉</text>
+  <text x="50%" y="60%" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#8B008B" text-anchor="middle" dominant-baseline="middle">DRAGON FRUIT</text>
+  <text x="50%" y="75%" font-family="Arial, sans-serif" font-size="18" fill="#4B0082" text-anchor="middle" dominant-baseline="middle">Exotic Fruit Plant</text>
+</svg>
+
