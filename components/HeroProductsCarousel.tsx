@@ -1,97 +1,123 @@
 'use client'
 
+import { useRef, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation } from 'swiper/modules'
+import type { Swiper as SwiperType } from 'swiper'
 import 'swiper/css'
-import 'swiper/css/navigation'
 import ProductCard from './ProductCard'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 export default function HeroProductsCarousel() {
+  const swiperRef = useRef<SwiperType | null>(null)
+  const currentSlideRef = useRef(0)
+
   const products = [
     {
       title: "Guava",
-      image: "/products/guava.jpg",
+      image_default: "/Website Images/guava(Hero)/Hero.jpg",
+      images_hover: [
+        "/Website Images/guava(Hero)/FB_IMG_1614582123664.jpg",
+        "/Website Images/guava(Hero)/FB_IMG_1614582130221.jpg",
+        "/Website Images/guava(Hero)/FB_IMG_1614582133488.jpg",
+        "/Website Images/guava(Hero)/FB_IMG_1614582146811.jpg"
+      ],
       price: "$12.00",
       rating: 5
     },
     {
       title: "Dragon Fruit",
-      image: "/products/dragon fruit.jpg",
+      image_default: "/Website Images/Dragon Fruit(Hero)/Hero.jpg",
+      images_hover: [
+        "/Website Images/Dragon Fruit(Hero)/PXL_20240225_063829675.jpg",
+        "/Website Images/Dragon Fruit(Hero)/sad.webp",
+        "/Website Images/Dragon Fruit(Hero)/safadfad.webp"
+      ],
       price: "$15.00",
       rating: 4
     },
     {
       title: "Lemon",
-      image: "/products/lemon.jpg",
+      image_default: "/Website Images/lemon(Hero)/Hero.png",
+      images_hover: [
+        "/Website Images/lemon(Hero)/FB_IMG_1614582137402.jpg",
+        "/Website Images/lemon(Hero)/IMG_20210426_165324_046.jpg",
+        "/Website Images/lemon(Hero)/IMG-20210525-WA0004.jpg"
+      ],
       price: "$8.00",
       rating: 5
     },
     {
       title: "Red Sandalwood",
-      image: "/products/red-sandalwood.jpg",
+      image_default: "/Website Images/Sandalwood(Hero)/Red sandalwood.jpeg",
+      images_hover: [
+        "/Website Images/Sandalwood(Hero)/Red sandalwood.jpeg",
+        "/Website Images/Sandalwood(Hero)/Red Sandalwood.png",
+        "/Website Images/Sandalwood(Hero)/tractor.jpeg"
+      ],
       price: "$25.00",
       rating: 4
     },
     {
       title: "Chiku",
-      image: "/products/chiku.jpg",
+      image_default: "/Website Images/chiku (Hero)/Hero.jpg",
+      images_hover: [
+        "/Website Images/chiku (Hero)/20210114_120925.jpg",
+        "/Website Images/chiku (Hero)/chiku tree.jpg",
+        "/Website Images/chiku (Hero)/chiku2.webp"
+      ],
       price: "$10.00",
       rating: 5
     }
   ]
 
+  // Auto-scroll between position 0 (cards 1-2-3-4) and position 1 (cards 2-3-4-5)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (swiperRef.current) {
+        // Alternate between slide 0 and slide 1
+        const nextSlide = currentSlideRef.current === 0 ? 1 : 0
+        swiperRef.current.slideTo(nextSlide)
+        currentSlideRef.current = nextSlide
+      }
+    }, 3000) // Change slide every 3 seconds
+
+    return () => clearInterval(interval)
+  }, [])
+
   return (
-    <section className="relative overflow-visible">
-      {/* Part 2.B - Background band (no negative margin) */}
-      <div className="relative w-full py-24 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxwYXR0ZXJuIGlkPSJsZWFmX3BhdHRlcm4iIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4KICAgICAgPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiMxYTQwMWMiLz4KICAgICAgPGVsbGlwc2UgY3g9IjIwIiBjeT0iMzAiIHJ4PSIxNSIgcnk9IjI1IiBmaWxsPSIjMjI4YjUzIiBvcGFjaXR5PSIwLjciLz4KICAgICAgPGVsbGlwc2UgY3g9IjgwIiBjeT0iMjAiIHJ4PSIxMiIgcnk9IjIwIiBmaWxsPSIjMTZhMzQxIiBvcGFjaXR5PSIwLjgiLz4KICAgICAgPGVsbGlwc2UgY3g9IjUwIiBjeT0iNzAiIHJ4PSIxOCIgcnk9IjMwIiBmaWxsPSIjMjI4YjUzIiBvcGFjaXR5PSIwLjYiLz4KICAgICAgPGVsbGlwc2UgY3g9IjMwIiBjeT0iODAiIHJ4PSIxNCIgcnk9IjIyIiBmaWxsPSIjMTZhMzQxIiBvcGFjaXR5PSIwLjc1Ii8+CiAgICAgIDxlbGxpcHNlIGN4PSI3MCIgY3k9IjkwIiByeD0iMTYiIHJ5PSIyNSIgZmlsbD0iIzIyOGI1MyIgb3BhY2l0eT0iMC42NSIvPgogICAgPC9wYXR0ZXJuPgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNsZWFmX3BhdHRlcm4pIi8+Cjwvc3ZnPg==')`
-          }}
-        />
-        <div className="absolute inset-0 bg-black/70" />
-        <div className="relative" />
-      </div>
-
-      {/* Part 2.A - Cards (negative margin, on top) */}
-      <div className="relative z-20 -mt-24 md:-mt-28 lg:-mt-32 w-full max-w-[1032px] mx-auto px-4">
-          {/* Section Title spacer removed to hide line */}
-          <div className="mb-6" />
-
+    <div className="relative z-30 bg-transparent">
+      <div className="w-full max-w-[1200px] mx-auto px-6 md:px-8 lg:px-12">
         {/* Carousel Container */}
         <div className="relative">
           <Swiper
-            modules={[Navigation]}
-            spaceBetween={18}
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper
+            }}
+            spaceBetween={16}
             slidesPerView={1}
             breakpoints={{
               640: {
                 slidesPerView: 2,
-                spaceBetween: 14,
+                spaceBetween: 16,
               },
               768: {
                 slidesPerView: 3,
-                spaceBetween: 16,
+                spaceBetween: 20,
               },
               1024: {
                 slidesPerView: 4,
-                spaceBetween: 18,
+                spaceBetween: 24,
               },
             }}
-            navigation={{
-              nextEl: '.hero-next',
-              prevEl: '.hero-prev',
-            }}
-            className="hero-products-swiper"
+            className="hero-products-swiper relative z-30"
           >
             {products.map((product, index) => (
               <SwiperSlide key={index}>
                 <div className="hero-scale mx-auto">
                   <ProductCard
                     title={product.title}
-                    image={product.image}
+                    image={(product as any).image}
+                    image_default={product.image_default}
+                    images_hover={product.images_hover}
                     price={product.price}
                     rating={product.rating}
                   />
@@ -99,41 +125,31 @@ export default function HeroProductsCarousel() {
               </SwiperSlide>
             ))}
           </Swiper>
-
-          {/* Right-side small navigation controls */}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-20 flex items-center gap-2 pr-2">
-            <button className="hero-prev w-10 h-10 rounded-full bg-white text-gray-700 shadow hover:bg-gray-50 flex items-center justify-center">
-              <span className="text-lg">‹</span>
-            </button>
-            <button className="hero-next w-10 h-10 rounded-full bg-white text-gray-700 shadow hover:bg-gray-50 flex items-center justify-center">
-              <span className="text-lg">›</span>
-            </button>
-          </div>
         </div>
       </div>
 
       {/* Custom Swiper Styles */}
       <style jsx global>{`
         .hero-products-swiper {
-          padding: 0; /* ensure only 4 slides visible on desktop */
+          padding: 0;
         }
         
-        /* Shrink hero product cards baseline; bumped slightly larger per request */
+        /* Hero product cards scale - adjusted for better spacing */
         .hero-products-swiper .hero-scale {
-          transform: scale(0.93); /* previously 0.86; ~+8% more */
+          transform: scale(1);
           transform-origin: center;
         }
-
-        .hero-products-swiper .swiper-slide {
-          height: auto;
-        }
         
-        .hero-prev.swiper-button-disabled,
-        .hero-next.swiper-button-disabled {
-          opacity: 0.3;
-          cursor: not-allowed;
+        /* Add padding to slides for better spacing */
+        .hero-products-swiper .swiper-slide {
+          padding: 0 4px;
+        }
+
+        /* Apply Poppins font to hero product cards */
+        .hero-products-swiper h3 {
+          font-family: 'Poppins', sans-serif;
         }
       `}</style>
-    </section>
+    </div>
   )
 }

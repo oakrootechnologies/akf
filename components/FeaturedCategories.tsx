@@ -138,18 +138,23 @@ export default function FeaturedCategories() {
             ))}
           </Swiper>
 
-          {/* Custom Navigation Arrows */}
-          <button className="swiper-button-prev-custom absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg z-10 transition-all hover:scale-110">
-            <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          
-          <button className="swiper-button-next-custom absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg z-10 transition-all hover:scale-110">
-            <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+          {/* Navigation Buttons */}
+          <div className="flex justify-between mt-6">
+            <button className="swiper-button-prev-custom text-gray-600 hover:text-gray-800 transition-colors flex items-center gap-1">
+              <span>←</span>
+              <span className="uppercase font-medium relative">
+                PREV
+                <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-black"></span>
+              </span>
+            </button>
+            <button className="swiper-button-next-custom text-gray-600 hover:text-gray-800 transition-colors flex items-center gap-1">
+              <span className="uppercase font-medium relative">
+                NEXT
+                <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-black"></span>
+              </span>
+              <span>→</span>
+            </button>
+          </div>
         </div>
       </div>
 

@@ -5,7 +5,9 @@ import { Eye } from 'lucide-react'
 
 interface ProductCardProps {
   title: string
-  image: string
+  image?: string // Legacy support
+  image_default?: string
+  images_hover?: string[]
   price?: string
   rating?: number
   variant?: 'default' | 'compact'
@@ -13,12 +15,17 @@ interface ProductCardProps {
 
 export default function ProductCard({ 
   title, 
-  image, 
+  image,
+  image_default,
+  images_hover = [],
   price = '$10.00', 
   rating = 5,
   variant = 'default'
 }: ProductCardProps) {
   const [isHovered, setIsHovered] = useState(false)
+  
+  // Support legacy 'image' prop or use new 'image_default'
+  const defaultImage = image_default || image || ''
 
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
@@ -45,22 +52,35 @@ export default function ProductCard({
     >
       {/* Product Image Container */}
       <div className="relative aspect-square overflow-hidden rounded-lg">
-        <img
-          src={image}
-          alt={title}
-          className={`w-full h-full object-cover transition-transform duration-300 ${
-            isHovered ? 'scale-110' : 'scale-100'
-          }`}
-        />
+        {/* Default Image - Fades out on hover */}
+        {defaultImage && (
+          <img
+            src={defaultImage}
+            alt={title}
+            className="w-full h-full object-cover relative z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-300"
+            loading="lazy"
+            decoding="async"
+          />
+        )}
+        
+        {/* Hover Images - Fade in on hover */}
+        {images_hover.map((hoverImage, index) => (
+          <img
+            key={index}
+            src={hoverImage}
+            alt={`${title} hover ${index + 1}`}
+            className="absolute top-0 left-0 w-full h-full object-cover z-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            loading="lazy"
+            decoding="async"
+          />
+        ))}
         
         {/* Overlay for hover effects */}
-        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300" />
-        
-        {/* Top-right icons removed globally (wishlist/compare) */}
+        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 z-20" />
         
         {/* Quick View Icon - Center */}
         <div
-          className={`absolute inset-0 flex items-center justify-center transition-all duration-300 ${
+          className={`absolute inset-0 flex items-center justify-center transition-all duration-300 z-30 ${
             isHovered ? 'opacity-100' : 'opacity-0'
           }`}
         >
@@ -72,7 +92,7 @@ export default function ProductCard({
 
       {/* Product Info */}
       <div className={`${infoPadding} relative`}>
-        <h3 className={`font-serif text-gray-800 ${titleClasses} mb-2 text-center`}>{title}</h3>
+        <h3 className={`font-sans text-gray-800 ${titleClasses} mb-2 text-center`}>{title}</h3>
         
         {/* Add to Cart removed globally */}
       </div>

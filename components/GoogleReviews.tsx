@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
-import { ChevronLeft, ChevronRight, Star, CheckCircle } from 'lucide-react'
+import { Star, CheckCircle } from 'lucide-react'
 
 export default function GoogleReviews() {
   const mockReviews = [
@@ -67,35 +67,39 @@ export default function GoogleReviews() {
   };
 
   return (
-    <section className="py-20 relative overflow-hidden">
-      {/* Leafy background across the whole section */}
+    <section className="py-32 md:py-40 lg:py-48 relative overflow-hidden">
+      {/* Background Image with Gaussian Blur */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxwYXR0ZXJuIGlkPSJsZWFmX3BhdHRlcm4iIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4KICAgICAgPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiMxYTQwMWMiLz4KICAgICAgPGVsbGlwc2UgY3g9IjIwIiBjeT0iMzAiIHJ4PSIxNSIgcnk9IjI1IiBmaWxsPSIjMjI4YjUzIiBvcGFjaXR5PSIwLjciLz4KICAgICAgPGVsbGlwc2UgY3g9IjgwIiBjeT0iMjAiIHJ4PSIxMiIgcnk9IjIwIiBmaWxsPSIjMTZhMzQxIiBvcGFjaXR5PSIwLjgiLz4KICAgICAgPGVsbGlwc2UgY3g9IjUwIiBjeT0iNzAiIHJ4PSIxOCIgcnk9IjMwIiBmaWxsPSIjMjI4YjUzIiBvcGFjaXR5PSIwLjYiLz4KICAgICAgPGVsbGlwc2UgY3g9IjMwIiBjeT0iODAiIHJ4PSIxNCIgcnk9IjIyIiBmaWxsPSIjMTZhMzQxIiBvcGFjaXR5PSIwLjc1Ii8+CiAgICAgIDxlbGxpcHNlIGN4PSI3MCIgY3k9IjkwIiByeD0iMTYiIHJ5PSIyNSIgZmlsbD0iIzIyOGI1MyIgb3BhY2l0eT0iMC42NSIvPgogICAgPC9wYXR0ZXJuPgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNsZWFmX3BhdHRlcm4pIi8+Cjwvc3ZnPg==')"
+          backgroundImage: "url('/Website Images/Review Section BG image(Gaussain Blur kr dena thoda).jpeg')",
+          filter: 'blur(5.6px)',
+          transform: 'scale(1.1)'
         }}
       />
-      <div className="absolute inset-0 bg-emerald-900/40" />
-      <div className="w-full max-w-[1032px] mx-auto px-4 rounded-lg p-8 relative z-10">
+      <div className="absolute inset-0 bg-black/30" />
+      <div className="w-full px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-xl text-gray-700 font-medium">
-            Follow the most popular trends and get exclusive items from Oksingreen
+        <div className="text-center mb-16 pt-8">
+          <h2 className="text-2xl md:text-3xl text-white font-bold drop-shadow-lg">
+            Lets see what our customer says for our services
           </h2>
         </div>
 
         {/* Main Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-[1238px] mx-auto pb-8">
           
           {/* Column 1: Google Business Card */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-lg shadow-md p-6 text-center">
               {/* Business Photo */}
-              <div className="w-24 h-24 mx-auto mb-4 rounded-lg overflow-hidden">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-lg overflow-hidden bg-white p-2 flex items-center justify-center">
                 <img
-                  src="https://placehold.co/100x100/CCC/333?text=Oksingreen"
+                  src="/logo/instaLOGO.png"
                   alt="Oksingreen Business"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               
@@ -155,6 +159,8 @@ export default function GoogleReviews() {
                               src={review.avatar}
                               alt={review.name}
                               className="w-full h-full object-cover"
+                              loading="lazy"
+                              decoding="async"
                             />
                           </div>
                           
@@ -194,13 +200,22 @@ export default function GoogleReviews() {
               </Swiper>
 
               {/* Navigation Buttons */}
-              <button className="reviews-button-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors">
-                <ChevronLeft className="w-5 h-5 text-gray-600" />
-              </button>
-              
-              <button className="reviews-button-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors">
-                <ChevronRight className="w-5 h-5 text-gray-600" />
-              </button>
+              <div className="flex justify-center items-center gap-6 mt-6">
+                <button className="reviews-button-prev text-white hover:text-gray-200 transition-colors flex items-center gap-1 drop-shadow-lg">
+                  <span>←</span>
+                  <span className="uppercase font-medium relative">
+                    PREV
+                    <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-white"></span>
+                  </span>
+                </button>
+                <button className="reviews-button-next text-white hover:text-gray-200 transition-colors flex items-center gap-1 drop-shadow-lg">
+                  <span className="uppercase font-medium relative">
+                    NEXT
+                    <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-white"></span>
+                  </span>
+                  <span>→</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -209,21 +224,11 @@ export default function GoogleReviews() {
       {/* Custom Swiper Styles */}
       <style jsx global>{`
         .reviews-swiper {
-          padding: 0 60px;
+          padding: 0;
         }
         
         .reviews-swiper .swiper-slide {
           height: auto;
-        }
-        
-        .reviews-button-prev,
-        .reviews-button-next {
-          color: #374151;
-        }
-        
-        .reviews-button-prev:hover,
-        .reviews-button-next:hover {
-          color: #22c55e;
         }
         
         .reviews-button-prev.swiper-button-disabled,

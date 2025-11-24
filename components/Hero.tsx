@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { ChevronLeft, ChevronRight, Sparkles, ShoppingBag } from 'lucide-react'
+import { Sparkles, ShoppingBag } from 'lucide-react'
 
 const heroImages = [
   '/images/hero/1.png',
@@ -63,7 +63,7 @@ export default function Hero() {
             
             <p className="text-xl text-gray-600 leading-relaxed">
               Discover our exclusive collection of premium plants and trees. 
-              Transform your space with nature's beauty and create a garden you'll love.
+              Transform your space with nature&apos;s beauty and create a garden you&apos;ll love.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -107,19 +107,29 @@ export default function Hero() {
                 ))}
               </div>
               
-              {/* Navigation Arrows */}
-              <button
-                onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full transition-colors shadow-lg"
-              >
-                <ChevronLeft className="h-6 w-6 text-gray-700" />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full transition-colors shadow-lg"
-              >
-                <ChevronRight className="h-6 w-6 text-gray-700" />
-              </button>
+              {/* Navigation Buttons */}
+              <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-10 flex items-center gap-8">
+                <button
+                  onClick={prevSlide}
+                  className="text-white hover:text-gray-200 transition-colors flex items-center gap-1 drop-shadow-lg"
+                >
+                  <span>←</span>
+                  <span className="uppercase font-medium relative">
+                    PREV
+                    <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-white"></span>
+                  </span>
+                </button>
+                <button
+                  onClick={nextSlide}
+                  className="text-white hover:text-gray-200 transition-colors flex items-center gap-1 drop-shadow-lg"
+                >
+                  <span className="uppercase font-medium relative">
+                    NEXT
+                    <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-white"></span>
+                  </span>
+                  <span>→</span>
+                </button>
+              </div>
               
               {/* Dots Indicator */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">

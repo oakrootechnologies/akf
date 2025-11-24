@@ -46,3 +46,32 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Hero Slider - Ensure full image height is visible */
+.hero-slider-swiper {
+  overflow: visible !important;
+}
+
+.hero-slider-swiper .swiper-wrapper {
+  overflow: visible !important;
+}
+
+.hero-slider-swiper .swiper-slide {
+  overflow: visible !important;
+  height: auto !important;
+}
+
+/* MohrRoundedAlt-Bold Font */
+@font-face {
+  font-family: 'MohrRoundedAlt-Bold';
+  src: url('/fonts/MohrRoundedAlt-Bold.woff2') format('woff2'),
+       url('/fonts/MohrRoundedAlt-Bold.woff') format('woff'),
+       url('/fonts/MohrRoundedAlt-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-mohr-rounded {
+  font-family: 'MohrRoundedAlt-Bold', 'Poppins', sans-serif;
+}
+

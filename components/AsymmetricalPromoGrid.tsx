@@ -1,10 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Play, X } from 'lucide-react'
 
 export default function AsymmetricalPromoGrid() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false)
+  const sectionRef = useRef<HTMLElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
+  const [hasAnimated, setHasAnimated] = useState(false)
 
   const openVideoModal = () => {
     setIsVideoModalOpen(true)
@@ -14,16 +17,41 @@ export default function AsymmetricalPromoGrid() {
     setIsVideoModalOpen(false)
   }
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setIsVisible(true)
+          setHasAnimated(true)
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px',
+      }
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current)
+      }
+    }
+  }, [hasAnimated])
+
   return (
     <>
-      <section className="py-16 bg-white">
-        <div className="w-full max-w-[1032px] mx-auto px-4">
+      <section ref={sectionRef} className="py-16 bg-white">
+        <div className="w-full max-w-[1238px] mx-auto px-4">
           <div className="origin-top scale-[0.8]">
             {/* Main Grid Container */}
             <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-8 w-full">
             
             {/* Grid Cell 1 (Top-Left): Plant Image */}
-            <div className="relative flex items-center justify-center bg-gray-50 rounded-lg overflow-hidden w-full aspect-[4/3]">
+            <div className={`relative flex items-center justify-center bg-gray-50 rounded-lg overflow-hidden w-full aspect-[4/3] ${isVisible ? 'slide-in-left' : 'slide-in-left-initial'}`}>
               {/* Leaf Background Graphic */}
               <div 
                 className="absolute inset-0 opacity-10"
@@ -40,11 +68,13 @@ export default function AsymmetricalPromoGrid() {
                 src="https://placehold.co/400x400/F5F5F5/333?text=Wall+Plant"
                 alt="Wall Plant"
                 className="relative z-10 w-full h-full object-cover transform scale-110"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
             {/* Grid Cell 2 (Top-Right): Text Block 1 */}
-            <div className="flex items-center justify-center p-8">
+            <div className={`flex items-center justify-center p-8 ${isVisible ? 'slide-in-left delay-200' : 'slide-in-left-initial delay-200'}`}>
               <div className="text-left max-w-md">
                 <h3 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
                   Nutrients Plant Collection
@@ -59,7 +89,7 @@ export default function AsymmetricalPromoGrid() {
             </div>
 
             {/* Grid Cell 3 (Bottom-Left): Text Block 2 */}
-            <div className="flex items-center justify-center p-8">
+            <div className={`flex items-center justify-center p-8 ${isVisible ? 'slide-in-right delay-400' : 'slide-in-right-initial delay-400'}`}>
               <div className="text-left max-w-md">
                 <h3 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
                   New In Trend
@@ -78,7 +108,7 @@ export default function AsymmetricalPromoGrid() {
 
             {/* Grid Cell 4 (Bottom-Right): Video Block */}
             <div 
-              className="relative flex items-center justify-center bg-gray-200 rounded-lg overflow-hidden cursor-pointer group w-full aspect-video"
+              className={`relative flex items-center justify-center bg-gray-200 rounded-lg overflow-hidden cursor-pointer group w-full aspect-video ${isVisible ? 'slide-in-right delay-600' : 'slide-in-right-initial delay-600'}`}
               onClick={openVideoModal}
             >
               {/* Video Thumbnail */}
@@ -86,6 +116,8 @@ export default function AsymmetricalPromoGrid() {
                 src="https://placehold.co/500x300/CCC/333?text=Video+Thumbnail"
                 alt="Video Thumbnail"
                 className="w-full h-full object-cover transform scale-110"
+                loading="lazy"
+                decoding="async"
               />
               
               {/* Dark Overlay */}
@@ -136,6 +168,61 @@ export default function AsymmetricalPromoGrid() {
           </div>
         </div>
       )}
+
+      {/* CSS Animations */}
+      <style jsx global>{`
+        @keyframes slideInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-100px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slideInRight {
+          from {
+            opacity: 0;
+            transform: translateX(100px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        .slide-in-left-initial {
+          opacity: 0;
+          transform: translateX(-100px);
+        }
+
+        .slide-in-left {
+          animation: slideInLeft 2.4s ease-out forwards;
+        }
+
+        .slide-in-right-initial {
+          opacity: 0;
+          transform: translateX(100px);
+        }
+
+        .slide-in-right {
+          animation: slideInRight 2.4s ease-out forwards;
+        }
+
+        .delay-200 {
+          animation-delay: 0.6s;
+        }
+
+        .delay-400 {
+          animation-delay: 1.2s;
+        }
+
+        .delay-600 {
+          animation-delay: 1.8s;
+        }
+      `}</style>
     </>
   )
 }
