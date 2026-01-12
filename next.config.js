@@ -56,31 +56,31 @@ const nextConfig = {
 
     // Obfuscation & Domain Locking (Production Client Only)
     if (!dev && !isServer) {
-      const WebpackObfuscator = require('webpack-obfuscator');
-      config.plugins.push(
-        // @ts-ignore
-        new WebpackObfuscator({
-          // Anti-Tamper / Crash Logic
-          domainLock: ['agrikrishifarms.com', 'www.agrikrishifarms.com', 'localhost', '127.0.0.1'],
-          domainLockRedirectUrl: 'about:blank', // Redirects to blank page on violation
-          debugProtection: true, // Freezes browser if devtools are opened
-          debugProtectionInterval: 4000,
-
-          // Obfuscation Settings
-          rotateStringArray: true,
-          stringArray: true,
-          stringArrayThreshold: 0.75,
-          controlFlowFlattening: true,
-          controlFlowFlatteningThreshold: 0.75,
-          deadCodeInjection: true,
-          deadCodeInjectionThreshold: 0.4,
-          unicodeEscapeSequence: false,
-
-          // Performance Tuning
-          splitStrings: true,
-          splitStringsChunkLength: 10,
-        }, [])
-      );
+      // const WebpackObfuscator = require('webpack-obfuscator');
+      // config.plugins.push(
+      //   // @ts-ignore
+      //   new WebpackObfuscator({
+      //     // Anti-Tamper / Crash Logic
+      //     domainLock: ['agrikrishifarms.com', 'www.agrikrishifarms.com', 'localhost', '127.0.0.1'],
+      //     domainLockRedirectUrl: 'about:blank', // Redirects to blank page on violation
+      //     debugProtection: true, // Freezes browser if devtools are opened
+      //     debugProtectionInterval: 4000,
+      // 
+      //     // Obfuscation Settings
+      //     rotateStringArray: true,
+      //     stringArray: true,
+      //     stringArrayThreshold: 0.75,
+      //     controlFlowFlattening: true,
+      //     controlFlowFlatteningThreshold: 0.75,
+      //     deadCodeInjection: true,
+      //     deadCodeInjectionThreshold: 0.4,
+      //     unicodeEscapeSequence: false,
+      // 
+      //     // Performance Tuning
+      //     splitStrings: true,
+      //     splitStringsChunkLength: 10,
+      //   }, [])
+      // );
     }
 
     return config;
