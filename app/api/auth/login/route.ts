@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-// In-memory storage for OTP (for VPS deployment)
+import { otpStore } from '@/lib/otpStore'
+
+// In-memory storage for OTP is now imported
 // In production, consider using Redis or a database
-const otpStore = new Map<string, { otp: string; expiresAt: number }>()
 
 export async function POST(request: NextRequest) {
   try {
@@ -65,6 +66,4 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// Export otpStore for use in verify route
-export { otpStore }
 

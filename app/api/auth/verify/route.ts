@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { otpStore } from '../login/route'
+import { otpStore } from '@/lib/otpStore'
 import { loginOrRegisterUser } from '@/lib/auth'
 
 export async function POST(request: NextRequest) {
