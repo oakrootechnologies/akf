@@ -64,11 +64,14 @@ function LazyVideoPlayer({ src, title, index }: { src: string; title: string; in
       }
     )
 
-    observer.observe(containerRef.current)
+    const currentRef = containerRef.current;
+    if (currentRef) {
+      observer.observe(currentRef)
+    }
 
     return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current)
+      if (currentRef) {
+        observer.unobserve(currentRef)
       }
     }
   }, [src, isLoaded, index, mounted])
@@ -99,7 +102,7 @@ function LazyVideoPlayer({ src, title, index }: { src: string; title: string; in
   if (!mounted) {
     return (
       <div className="relative group flex justify-center">
-        <div 
+        <div
           className="relative aspect-[9/16] bg-gray-800 rounded-lg overflow-hidden w-60"
         >
           {/* Placeholder while mounting */}
@@ -110,8 +113,8 @@ function LazyVideoPlayer({ src, title, index }: { src: string; title: string; in
 
   return (
     <div className="relative group flex justify-center">
-      <div 
-        ref={containerRef} 
+      <div
+        ref={containerRef}
         className="relative aspect-[9/16] bg-gray-800 rounded-lg overflow-hidden w-60 cursor-pointer"
         onClick={handleVideoClick}
       >
@@ -127,7 +130,7 @@ function LazyVideoPlayer({ src, title, index }: { src: string; title: string; in
           onPlay={handleVideoPlay}
           onPause={handleVideoPause}
         />
-        
+
         {/* Play Button Overlay - Show when paused */}
         {!isPlaying && isLoaded && (
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
@@ -136,7 +139,7 @@ function LazyVideoPlayer({ src, title, index }: { src: string; title: string; in
             </div>
           </div>
         )}
-        
+
         {/* Video Title */}
         <div className="absolute bottom-3 left-3 right-3">
           <h4 className="text-white text-sm font-semibold truncate drop-shadow-lg">
@@ -203,11 +206,14 @@ export default function VideoSection() {
       }
     )
 
-    observer.observe(videoContainerRef.current)
+    const currentVideoContainerRef = videoContainerRef.current;
+    if (currentVideoContainerRef) {
+      observer.observe(currentVideoContainerRef)
+    }
 
     return () => {
-      if (videoContainerRef.current) {
-        observer.unobserve(videoContainerRef.current)
+      if (currentVideoContainerRef) {
+        observer.unobserve(currentVideoContainerRef)
       }
     }
   }, [mounted])
@@ -282,60 +288,60 @@ export default function VideoSection() {
       {/* Top Section: Horizontal Video (1920x1080) - Full Width */}
       <div className="mb-8 md:mb-12 lg:mb-16 w-full px-4">
         <div ref={videoContainerRef} className="relative aspect-video bg-gray-800 rounded-lg overflow-hidden max-w-7xl mx-auto scale-100 md:scale-[0.9025]">
-              {/* Video Element - Only render when mounted */}
-              {mounted && (
-              <video
-                ref={videoRef}
-                src="/reels/main.mp4"
-                className="w-full h-full object-cover"
-                loop
-                  muted={isMuted}
-                onClick={togglePlay}
-                onPlay={handleVideoPlay}
-                onPause={handleVideoPause}
-                preload="none"
-                playsInline
-                suppressHydrationWarning
-              />
-              )}
-              
-              {/* Play/Pause Button Overlay */}
-              {mounted && !isPlaying && (
-                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
-                  <button 
-                    onClick={togglePlay}
-                    className="w-20 h-20 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-all duration-300 hover:scale-110 z-10"
-                  >
-                    <Play className="w-8 h-8 text-gray-800 ml-1" fill="currentColor" />
-                  </button>
-                </div>
-              )}
-              
-              {/* Mute/Unmute Button */}
+          {/* Video Element - Only render when mounted */}
+          {mounted && (
+            <video
+              ref={videoRef}
+              src="/reels/main.mp4"
+              className="w-full h-full object-cover"
+              loop
+              muted={isMuted}
+              onClick={togglePlay}
+              onPlay={handleVideoPlay}
+              onPause={handleVideoPause}
+              preload="none"
+              playsInline
+              suppressHydrationWarning
+            />
+          )}
+
+          {/* Play/Pause Button Overlay */}
+          {mounted && !isPlaying && (
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
               <button
-                onClick={(e) => {
-                  e.preventDefault()
-                  e.stopPropagation()
-                  toggleMute()
-                }}
-                className="absolute top-4 right-4 w-12 h-12 bg-black bg-opacity-60 hover:bg-opacity-80 rounded-full flex items-center justify-center transition-all duration-300 z-10"
-                aria-label={isMuted ? "Unmute video" : "Mute video"}
-                type="button"
+                onClick={togglePlay}
+                className="w-20 h-20 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-all duration-300 hover:scale-110 z-10"
               >
-                {isMuted ? (
-                  <VolumeX className="w-6 h-6 text-white" />
-                ) : (
-                  <Volume2 className="w-6 h-6 text-white" />
-                )}
+                <Play className="w-8 h-8 text-gray-800 ml-1" fill="currentColor" />
               </button>
-              
-              {/* Video Info */}
-              <div className="absolute bottom-4 left-4 text-white z-10">
-                <h3 className="text-xl font-bold mb-1">Premium Plant Collection</h3>
-                <p className="text-sm opacity-90">Discover our latest horticulture innovations</p>
             </div>
+          )}
+
+          {/* Mute/Unmute Button */}
+          <button
+            onClick={(e) => {
+              e.preventDefault()
+              e.stopPropagation()
+              toggleMute()
+            }}
+            className="absolute top-4 right-4 w-12 h-12 bg-black bg-opacity-60 hover:bg-opacity-80 rounded-full flex items-center justify-center transition-all duration-300 z-10"
+            aria-label={isMuted ? "Unmute video" : "Mute video"}
+            type="button"
+          >
+            {isMuted ? (
+              <VolumeX className="w-6 h-6 text-white" />
+            ) : (
+              <Volume2 className="w-6 h-6 text-white" />
+            )}
+          </button>
+
+          {/* Video Info */}
+          <div className="absolute bottom-4 left-4 text-white z-10">
+            <h3 className="text-xl font-bold mb-1">Premium Plant Collection</h3>
+            <p className="text-sm opacity-90">Discover our latest horticulture innovations</p>
           </div>
         </div>
+      </div>
 
       {/* Bottom Section: Vertical Videos Carousel (1080x1920) - Master Content Width */}
       <div className="w-full max-w-[1238px] mx-auto px-4">
@@ -357,7 +363,7 @@ export default function VideoSection() {
           >
             {verticalVideos.map((video, index) => (
               <SwiperSlide key={video.id}>
-                <LazyVideoPlayer 
+                <LazyVideoPlayer
                   src={video.video}
                   title={video.title}
                   index={index}

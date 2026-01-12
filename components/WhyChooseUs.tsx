@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 
 import { useState } from 'react'
@@ -41,16 +42,16 @@ export default function WhyChooseUs() {
   return (
     <section className="relative pt-40 md:pt-48 lg:pt-56 pb-20 overflow-hidden z-10">
       {/* Layer 1 (Bottom): Dark Green Leafy Background */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat z-10"
         style={{
           backgroundImage: `url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxwYXR0ZXJuIGlkPSJsZWFmX3BhdHRlcm4iIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4KICAgICAgPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiMxYTQwMWMiLz4KICAgICAgPGVsbGlwc2UgY3g9IjIwIiBjeT0iMzAiIHJ4PSIxNSIgcnk9IjI1IiBmaWxsPSIjMjI4YjUzIiBvcGFjaXR5PSIwLjciLz4KICAgICAgPGVsbGlwc2UgY3g9IjgwIiBjeT0iMjAiIHJ4PSIxMiIgcnk9IjIwIiBmaWxsPSIjMTZhMzQxIiBvcGFjaXR5PSIwLjgiLz4KICAgICAgPGVsbGlwc2UgY3g9IjUwIiBjeT0iNzAiIHJ4PSIxOCIgcnk9IjMwIiBmaWxsPSIjMjI4YjUzIiBvcGFjaXR5PSIwLjYiLz4KICAgICAgPGVsbGlwc2UgY3g9IjMwIiBjeT0iODAiIHJ4PSIxNCIgcnk9IjIyIiBmaWxsPSIjMTZhMzQxIiBvcGFjaXR5PSIwLjc1Ii8+CiAgICAgIDxlbGxpcHNlIGN4PSI3MCIgY3k9IjkwIiByeD0iMTYiIHJ5PSIyNSIgZmlsbD0iIzIyOGI1MyIgb3BhY2l0eT0iMC42NSIvPgogICAgPC9wYXR0ZXJuPgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNsZWFmX3BhdHRlcm4pIi8+Cjwvc3ZnPg==')`
         }}
       />
-      
+
       {/* Layer 2 (Middle): Dark Black Overlay */}
       <div className="absolute inset-0 bg-black opacity-75 z-20" />
-      
+
       {/* Layer 3 (Top): Content */}
       <div className="relative z-30">
         {/* Section Header */}
@@ -85,7 +86,7 @@ export default function WhyChooseUs() {
 
           {/* Center Column - Cactus Image with Hover Animation */}
           <div className="md:order-2 order-1 flex justify-center">
-            <div 
+            <div
               className="relative"
               onMouseEnter={() => setCactusHovered(true)}
               onMouseLeave={() => setCactusHovered(false)}
@@ -93,9 +94,8 @@ export default function WhyChooseUs() {
               <img
                 src="/cactus/purepng.com-cactusplantcactuscacticactaceae-1411526817834d7itg-removebg-preview.png"
                 alt="Cactus"
-                className={`w-full max-w-sm h-auto object-contain transition-transform duration-300 ${
-                  cactusHovered ? 'transform -translate-y-1' : 'transform translate-y-0'
-                }`}
+                className={`w-full max-w-sm h-auto object-contain transition-transform duration-300 ${cactusHovered ? 'transform -translate-y-1' : 'transform translate-y-0'
+                  }`}
               />
             </div>
           </div>
