@@ -152,7 +152,7 @@ export default function TabbedProductGrid() {
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex justify-center mb-8 md:mb-12 overflow-x-auto"> // scrollable on mobile
+        <div className="flex justify-center mb-8 md:mb-12 overflow-x-auto">
           <div className="flex bg-gray-100 rounded-full p-1 gap-1">
             {[
               { id: 'vegetable', label: 'Vegetables' },
@@ -163,8 +163,8 @@ export default function TabbedProductGrid() {
                 key={tab.id}
                 onClick={() => handleTabChange(tab.id as any)}
                 className={`px-6 md:px-8 py-2 md:py-3 rounded-full text-sm md:text-base font-semibold transition-all duration-300 whitespace-nowrap ${activeTab === tab.id
-                    ? 'bg-primary-500 text-white shadow-md'
-                    : 'text-gray-600 hover:text-gray-800 hover:bg-gray-200'
+                  ? 'bg-primary-500 text-white shadow-md'
+                  : 'text-gray-600 hover:text-gray-800 hover:bg-gray-200'
                   }`}
               >
                 {tab.label}
