@@ -1,6 +1,6 @@
-# Hostinger Deployment Guide for Oksingreen Website
+# Hostinger Deployment Guide for Agrikrishi Farms Website
 
-This guide will help you deploy the Oksingreen website to Hostinger using Node.js hosting (required for MongoDB API routes).
+This guide will help you deploy the Agrikrishi Farms website to Hostinger using Node.js hosting (required for MongoDB API routes).
 
 ## Prerequisites
 

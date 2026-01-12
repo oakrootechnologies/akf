@@ -1,6 +1,6 @@
 # Static Frontend Deployment Guide for Hostinger
 
-This guide will help you deploy the Oksingreen website as a static frontend to Hostinger.
+This guide will help you deploy the Agrikrishi Farms website as a static frontend to Hostinger.
 
 ## Build Steps
 

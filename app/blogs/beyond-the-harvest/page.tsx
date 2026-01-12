@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import NavbarMain from '@/components/NavbarMain'
 import Footer from '@/components/Footer'
-import { Calendar, Clock, Share2, Play, TrendingUp, Tag } from 'lucide-react'
+import { Calendar, Clock, Share2, Play } from 'lucide-react'
 import { useState } from 'react'
 
 export default function BlogPostPage() {
@@ -14,10 +14,10 @@ export default function BlogPostPage() {
     mainImage: "/realblog/2 MAIN.png",
     thumbnailImage: "/realblog/2.webp",
     video: "/realblog/2.mp4",
-    date: "February 20, 2024",
+    date: "November 29, 2025",
     readTime: "10 min read",
     category: "Agroforestry",
-    author: "Oksingreen Team",
+    author: "Agrikrishi Farms Team",
     content: {
       introduction: "We often think of soil as just... dirt. A simple, inert medium to prop up plants. But this is the single biggest misunderstanding in modern agriculture. Real, healthy soil is not dirt. It's a living, breathing, and complex ecosystem—a sprawling underground city teeming with billions of microbes, fungi, and invertebrates. In conventional farming, this ecosystem is often damaged by heavy tilling, monocropping, and chemical inputs. Horticulture, with its focus on intensive, high-value cultivation, offers a powerful set of tools to do the exact opposite: to build and enrich this \"living\" soil. The secret? Horticultural practices feed the soil, and in turn, the soil feeds the plants. This approach isn't just a feel-good story; it is the most critical investment a grower can make for long-term profitability and resilience.",
       sections: [
@@ -58,25 +58,6 @@ export default function BlogPostPage() {
       conclusion: "The old, extractive model of farming is running out of time. It's dependent on costly inputs and is highly vulnerable to a changing climate. Horticulture teaches us a better way. By focusing on building soil, we are not just growing crops; we are building a resilient, self-sufficient, and profitable foundation for a farm. It's an investment in a living bank account that pays compounding dividends for decades to come."
     }
   }
-
-  const relatedPosts = [
-    {
-      id: 1,
-      slug: 'the-green-gold-rush',
-      title: "The Green Gold Rush: How Horticulture & Agroforestry Decrease Carbon Consumption",
-      mainImage: "/realblog/1 MAIN.webp",
-      date: "January 15, 2024",
-      readTime: "8 min read"
-    },
-    {
-      id: 3,
-      slug: 'traditional-vs-horticulture-farming',
-      title: "Is a 1-Acre Garden Worth More Than a 100-Acre Field?",
-      mainImage: "/realblog/3 MAIN.JPG",
-      date: "March 10, 2024",
-      readTime: "12 min read"
-    }
-  ]
 
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
 
@@ -282,63 +263,6 @@ export default function BlogPostPage() {
                 </ul>
               </div>
 
-              {/* Related Posts */}
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-4 font-serif flex items-center gap-2">
-                  <TrendingUp className="w-5 h-5 text-[#81ba00]" />
-                  Related Posts
-                </h3>
-                <ul className="space-y-4">
-                  {relatedPosts.map((post) => (
-                    <li key={post.id}>
-                      <Link 
-                        href={`/blogs/${post.slug}`}
-                        className="group flex gap-3 hover:opacity-80 transition-opacity"
-                      >
-                        <div className="flex-shrink-0 w-20 h-20 rounded overflow-hidden">
-                          <img
-                            src={post.mainImage}
-                            alt={post.title}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="text-sm font-semibold text-gray-900 line-clamp-2 group-hover:text-[#81ba00] transition-colors">
-                            {post.title}
-                          </p>
-                          <p className="text-xs text-gray-500 mt-1">{post.date}</p>
-                        </div>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Categories */}
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-4 font-serif flex items-center gap-2">
-                  <Tag className="w-5 h-5 text-[#81ba00]" />
-                  Categories
-                </h3>
-                <ul className="space-y-2">
-                  <li>
-                    <Link href="/blogs?category=Horticulture" className="text-gray-600 hover:text-[#81ba00] transition-colors text-sm block py-2">
-                      Horticulture
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/blogs?category=Agroforestry" className="text-gray-600 hover:text-[#81ba00] transition-colors text-sm block py-2">
-                      Agroforestry
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/blogs?category=Farming Methods" className="text-gray-600 hover:text-[#81ba00] transition-colors text-sm block py-2">
-                      Farming Methods
-                    </Link>
-                  </li>
-                </ul>
-              </div>
             </aside>
           </div>
         </div>
@@ -356,7 +280,7 @@ export default function BlogPostPage() {
             <div className="flex-1">
               <h3 className="text-xl font-bold text-gray-900 mb-2 font-serif">{blog.author}</h3>
               <p className="text-gray-600 leading-relaxed">
-                Oksingreen Team is dedicated to providing expert insights on horticulture, agroforestry, and sustainable farming practices. Our mission is to empower farmers and investors with knowledge that drives profitability and environmental stewardship.
+                Agrikrishi Farms Team is dedicated to providing expert insights on horticulture, agroforestry, and sustainable farming practices. Our mission is to empower farmers and investors with knowledge that drives profitability and environmental stewardship.
               </p>
             </div>
           </div>

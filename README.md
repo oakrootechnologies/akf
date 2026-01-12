@@ -1,4 +1,4 @@
-# OksinGreen - Beautiful Plant & Tree Store
+# Agrikrishi Farms - Beautiful Plant & Tree Store
 
 A modern, fabulous frontend website built with Next.js, featuring a beautiful UI for showcasing plants and trees.
 
@@ -38,7 +38,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Project Structure
 
 ```
-oksingreen/
+agrikrishifarms/
 ├── app/
 │   ├── layout.tsx
 │   ├── page.tsx

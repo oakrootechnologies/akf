@@ -1,4 +1,4 @@
-# Performance Check Script for Oksingreen (Windows PowerShell)
+# Performance Check Script for Agrikrishi Farms (Windows PowerShell)
 # This script builds the project and runs Lighthouse CI for performance testing
 
 Write-Host "🚀 Starting performance check..." -ForegroundColor Green

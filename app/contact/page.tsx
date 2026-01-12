@@ -86,7 +86,7 @@ export default function ContactPage() {
                     </div>
                     <div className="ml-4">
                       <h3 className="text-lg font-bold text-gray-900 mb-1">Email</h3>
-                      <p className="text-gray-600">contact@oksingreen.com</p>
+                      <p className="text-gray-600">info@agrikrishifarms.com</p>
                     </div>
                   </div>
                   
@@ -97,8 +97,7 @@ export default function ContactPage() {
                     </div>
                     <div className="ml-4">
                       <h3 className="text-lg font-bold text-gray-900 mb-1">Phone</h3>
-                      <p className="text-gray-600">+91 8518 817 482</p>
-                      <p className="text-gray-600">+91 8817 500 835</p>
+                      <p className="text-gray-600">79873 84443</p>
                     </div>
                   </div>
                   
@@ -109,7 +108,7 @@ export default function ContactPage() {
                     </div>
                     <div className="ml-4">
                       <h3 className="text-lg font-bold text-gray-900 mb-1">Address</h3>
-                      <p className="text-gray-600">Indore, Madhya Pradesh</p>
+                      <p className="text-gray-600">Indore</p>
                     </div>
                   </div>
                 </div>

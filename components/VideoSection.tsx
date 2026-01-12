@@ -215,12 +215,12 @@ export default function VideoSection() {
     {
       id: 1,
       title: "Apple Bore",
-      video: "/reels/AppleWeb.mov"
+      video: "/reels/AppleWeb.mp4"
     },
     {
       id: 2,
       title: "Custard Apple",
-      video: "/reels/CustardWeb.mov"
+      video: "/reels/CustardWeb.mp4"
     },
     {
       id: 3,
@@ -235,7 +235,7 @@ export default function VideoSection() {
     {
       id: 5,
       title: "Lemon",
-      video: "/reels/Lemon.mov"
+      video: "/reels/Lemon.mp4"
     },
     {
       id: 6,
@@ -278,10 +278,10 @@ export default function VideoSection() {
   }
 
   return (
-    <section className="py-20 bg-gray-100">
+    <section className="py-12 md:py-16 lg:py-20 bg-gray-100">
       {/* Top Section: Horizontal Video (1920x1080) - Full Width */}
-      <div className="mb-16 w-full px-4">
-        <div ref={videoContainerRef} className="relative aspect-video bg-gray-800 rounded-lg overflow-hidden max-w-7xl mx-auto scale-[0.9025]">
+      <div className="mb-8 md:mb-12 lg:mb-16 w-full px-4">
+        <div ref={videoContainerRef} className="relative aspect-video bg-gray-800 rounded-lg overflow-hidden max-w-7xl mx-auto scale-100 md:scale-[0.9025]">
               {/* Video Element - Only render when mounted */}
               {mounted && (
               <video
@@ -342,8 +342,8 @@ export default function VideoSection() {
         <div className="relative">
           <Swiper
             modules={[Navigation]}
-            spaceBetween={24}
-            slidesPerView={1}
+            spaceBetween={16}
+            slidesPerView={1.5}
             breakpoints={{
               640: { slidesPerView: 2, spaceBetween: 16 },
               768: { slidesPerView: 3, spaceBetween: 20 },
@@ -366,8 +366,8 @@ export default function VideoSection() {
             ))}
           </Swiper>
 
-          {/* Navigation Buttons */}
-          <div className="flex justify-center items-center gap-6 mt-6">
+          {/* Navigation Buttons - Hidden on mobile */}
+          <div className="hidden md:flex justify-center items-center gap-6 mt-6">
             <button className="vertical-videos-prev text-gray-600 hover:text-gray-800 transition-colors flex items-center gap-1">
               <span>←</span>
               <span className="uppercase font-medium relative">

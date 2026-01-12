@@ -15,15 +15,18 @@ export default function FeatureCard({ title, description, icon, iconBgImage, ali
 
   return (
     <div 
-      className={`relative z-50 flex items-start gap-4 mb-8 ${
-        alignment === 'right' ? 'flex-row-reverse' : 'flex-row'
+      className={`relative z-50 mb-6 md:mb-8 ${
+        // Mobile: vertical stack (icon top, text below), Desktop: horizontal layout
+        'flex flex-col items-center md:flex-row md:items-start gap-4'
+      } ${
+        alignment === 'right' ? 'md:flex-row-reverse' : ''
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Icon */}
+      {/* Icon - Top center on mobile, left/right on desktop */}
       <div 
-        className={`w-14 h-14 md:w-[72px] md:h-[72px] rounded-full flex items-center justify-center bg-cover bg-center bg-no-repeat flex-shrink-0 ${
+        className={`w-16 h-16 md:w-14 lg:w-[72px] md:h-14 lg:h-[72px] rounded-full flex items-center justify-center bg-cover bg-center bg-no-repeat flex-shrink-0 ${
           isHovered ? 'scale-110 rotate-y-360' : 'scale-100'
         }`}
         style={{ backgroundImage: `url(${iconBgImage})` }}
@@ -31,10 +34,10 @@ export default function FeatureCard({ title, description, icon, iconBgImage, ali
         {icon}
       </div>
       
-      {/* Content */}
-      <div className={`flex-1 min-w-0 ${alignment === 'right' ? 'text-right' : 'text-left'}`}>
-        <h3 className="text-white text-lg md:text-xl font-bold mb-2">{title}</h3>
-        <p className="text-white text-xs md:text-sm leading-[1.5] opacity-90 break-words whitespace-normal overflow-hidden text-ellipsis line-clamp-2">
+      {/* Content - Center aligned on mobile, left/right on desktop */}
+      <div className={`flex-1 min-w-0 text-center md:text-left ${alignment === 'right' ? 'md:text-right' : ''}`}>
+        <h3 className="text-white text-base md:text-lg lg:text-xl font-bold mb-2">{title}</h3>
+        <p className="text-white text-xs md:text-sm leading-[1.5] opacity-90 break-words whitespace-normal">
           {description}
         </p>
       </div>

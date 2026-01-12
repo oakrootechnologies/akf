@@ -1,6 +1,6 @@
 # Performance Optimization Guide
 
-This document outlines the performance optimizations implemented for the Oksingreen website.
+This document outlines the performance optimizations implemented for the Agrikrishi Farms website.
 
 ## Overview
 

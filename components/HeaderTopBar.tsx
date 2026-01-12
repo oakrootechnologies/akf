@@ -2,6 +2,7 @@
 
 import { Phone, Mail, ChevronDown, Heart, ShoppingCart } from 'lucide-react'
 import { useState } from 'react'
+import Link from 'next/link'
 
 export default function HeaderTopBar() {
   const [showAccountDropdown, setShowAccountDropdown] = useState(false)
@@ -14,11 +15,11 @@ export default function HeaderTopBar() {
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2 text-sm">
               <Phone className="h-4 w-4" />
-              <span>+123 456 7890</span>
+              <span>79873 84443</span>
             </div>
             <div className="flex items-center space-x-2 text-sm">
               <Mail className="h-4 w-4" />
-              <span>info@oksingreen.com</span>
+              <span>info@agrikrishifarms.com</span>
             </div>
           </div>
 
@@ -35,18 +36,20 @@ export default function HeaderTopBar() {
               </button>
               {showAccountDropdown && (
                 <div className="absolute right-0 mt-2 w-48 bg-white text-gray-900 rounded-lg shadow-lg py-2 z-50">
-                  <a
-                    href="#"
+                  <Link
+                    href="/login"
                     className="block px-4 py-2 hover:bg-gray-100 text-sm"
+                    onClick={() => setShowAccountDropdown(false)}
                   >
                     Login
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    href="/track-order"
                     className="block px-4 py-2 hover:bg-gray-100 text-sm"
+                    onClick={() => setShowAccountDropdown(false)}
                   >
-                    Register
-                  </a>
+                    Track Order
+                  </Link>
                 </div>
               )}
             </div>
@@ -58,10 +61,13 @@ export default function HeaderTopBar() {
             </button>
 
             {/* Checkout */}
-            <button className="flex items-center space-x-1 text-sm hover:text-primary-400 transition-colors">
+            <Link
+              href="/checkout"
+              className="flex items-center space-x-1 text-sm hover:text-primary-400 transition-colors"
+            >
               <ShoppingCart className="h-4 w-4" />
               <span>Checkout</span>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,9 +1,10 @@
 'use client'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation } from 'swiper/modules'
+import { Navigation, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
+import 'swiper/css/autoplay'
 import { Star, CheckCircle } from 'lucide-react'
 
 export default function GoogleReviews() {
@@ -67,7 +68,7 @@ export default function GoogleReviews() {
   };
 
   return (
-    <section className="py-32 md:py-40 lg:py-48 relative overflow-hidden">
+    <section className="py-16 md:py-24 lg:py-32 xl:py-40 2xl:py-48 relative overflow-hidden">
       {/* Background Image with Gaussian Blur */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -80,31 +81,29 @@ export default function GoogleReviews() {
       <div className="absolute inset-0 bg-black/30" />
       <div className="w-full px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16 pt-8">
-          <h2 className="text-2xl md:text-3xl text-white font-bold drop-shadow-lg">
+        <div className="text-center mb-8 md:mb-12 lg:mb-16 pt-4 md:pt-8">
+          <h2 className="text-xl md:text-2xl lg:text-3xl text-white font-bold drop-shadow-lg">
             Lets see what our customer says for our services
           </h2>
         </div>
 
-        {/* Main Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-[1238px] mx-auto pb-8">
+        {/* Main Container - Stacked on mobile */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-[1238px] mx-auto pb-8">
           
-          {/* Column 1: Google Business Card */}
-          <div className="lg:col-span-1">
+          {/* Column 1: Google Business Card - On top for mobile */}
+          <div className="lg:col-span-1 order-1">
             <div className="bg-white rounded-lg shadow-md p-6 text-center">
               {/* Business Photo */}
               <div className="w-24 h-24 mx-auto mb-4 rounded-lg overflow-hidden bg-white p-2 flex items-center justify-center">
                 <img
-                  src="/logo/instaLOGO.png"
-                  alt="Oksingreen Business"
+                  src="/logo/Agrikrishifarms.jpg"
+                  alt="Agrikrishi Farms Business"
                   className="w-full h-full object-contain"
-                  loading="lazy"
-                  decoding="async"
                 />
               </div>
               
               {/* Business Name */}
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Oksingreen</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Agrikrishi Farms</h3>
               
               {/* Star Rating */}
               <div className="flex justify-center gap-1 mb-2">
@@ -124,21 +123,36 @@ export default function GoogleReviews() {
             </div>
           </div>
 
-          {/* Column 2: Reviews Carousel */}
-          <div className="lg:col-span-2">
+          {/* Column 2: Reviews Carousel - Below business card on mobile */}
+          <div className="lg:col-span-2 order-2">
             <div className="relative">
               <Swiper
-                modules={[Navigation]}
-                spaceBetween={20}
+                modules={[Navigation, Autoplay]}
+                spaceBetween={16}
                 slidesPerView={1}
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: false,
+                  pauseOnMouseEnter: true,
+                }}
                 breakpoints={{
                   640: {
+                    slidesPerView: 1,
+                    spaceBetween: 16,
+                    autoplay: {
+                      delay: 3000,
+                      disableOnInteraction: false,
+                    },
+                  },
+                  768: {
                     slidesPerView: 2,
                     spaceBetween: 20,
+                    autoplay: false, // Disable autoplay on tablet and desktop
                   },
                   1024: {
                     slidesPerView: 3,
                     spaceBetween: 20,
+                    autoplay: false, // Disable autoplay on desktop
                   },
                 }}
                 navigation={{
@@ -199,8 +213,8 @@ export default function GoogleReviews() {
                 ))}
               </Swiper>
 
-              {/* Navigation Buttons */}
-              <div className="flex justify-center items-center gap-6 mt-6">
+              {/* Navigation Buttons - Hidden on mobile */}
+              <div className="hidden md:flex justify-center items-center gap-6 mt-6">
                 <button className="reviews-button-prev text-white hover:text-gray-200 transition-colors flex items-center gap-1 drop-shadow-lg">
                   <span>←</span>
                   <span className="uppercase font-medium relative">

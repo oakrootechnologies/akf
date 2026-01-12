@@ -3,22 +3,27 @@
 import { Search, ShoppingCart } from 'lucide-react'
 import { useState } from 'react'
 import { Leaf } from 'lucide-react'
+import { useCart } from '@/hooks/useCart'
+import CartDrawer from '@/components/CartDrawer'
 
 export default function HeaderMain() {
   const [searchQuery, setSearchQuery] = useState('')
-  const [showCartDropdown, setShowCartDropdown] = useState(false)
+  const [showCartDrawer, setShowCartDrawer] = useState(false)
+  const { getTotalPrice, getTotalItems, isLoaded } = useCart()
 
   return (
-    <div className="bg-white border-b border-gray-200 py-4">
+    <div className="bg-green-50 border-b border-green-100 py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4">
           {/* Logo */}
           <div className="flex items-center space-x-2 min-w-fit">
-            <div className="bg-primary-600 p-2 rounded-lg">
-              <Leaf className="h-6 w-6 text-white" />
-            </div>
+            <img 
+              src="/logo/Agrikrishifarms.jpg"
+              alt="Agrikrishi Farms Logo"
+              className="w-10 h-10 object-contain"
+            />
             <a href="/" className="text-2xl font-bold text-gray-900 hover:text-primary-600 transition-colors">
-              Oksingreen
+              Agrikrishi Farms
             </a>
           </div>
 
@@ -53,30 +58,30 @@ export default function HeaderMain() {
           {/* Shopping Cart */}
           <div className="relative min-w-fit">
             <button
-              onClick={() => setShowCartDropdown(!showCartDropdown)}
-              className="flex items-center space-x-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+              onClick={() => setShowCartDrawer(true)}
+              className="flex items-center space-x-3 p-3 hover:bg-green-100 rounded-lg transition-colors"
             >
               <div className="relative">
                 <ShoppingCart className="h-8 w-8 text-primary-600" />
+                {isLoaded && getTotalItems() > 0 && (
+                  <span className="absolute -top-1 -right-1 bg-primary-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                    {getTotalItems()}
+                  </span>
+                )}
               </div>
               <div className="text-left">
                 <div className="text-sm font-semibold text-gray-900">My Cart</div>
-                <div className="text-xs text-gray-600">0 item(s) - $0.00</div>
-              </div>
-            </button>
-
-            {/* Cart Dropdown */}
-            {showCartDropdown && (
-              <div className="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 z-50 p-4">
-                <div className="text-center py-8">
-                  <ShoppingCart className="h-16 w-16 text-gray-300 mx-auto mb-3" />
-                  <p className="text-gray-600">Your cart is empty</p>
+                <div className="text-xs text-gray-600">
+                  {isLoaded
+                    ? `${getTotalItems()} item(s) - $${getTotalPrice().toFixed(2)}`
+                    : 'Loading...'}
                 </div>
               </div>
-            )}
+            </button>
           </div>
         </div>
       </div>
+      <CartDrawer isOpen={showCartDrawer} onClose={() => setShowCartDrawer(false)} />
     </div>
   )
 }

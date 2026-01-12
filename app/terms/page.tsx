@@ -69,7 +69,7 @@ export default function TermsAndConditionsPage() {
             TERMS AND CONDITIONS
           </h1>
           <p className="text-gray-600 mb-8">
-            Last Updated: 15 November 2025
+            Last Updated: 29 November 2025
           </p>
 
           <div className="flex flex-col md:flex-row gap-8 md:gap-12">
@@ -363,7 +363,7 @@ export default function TermsAndConditionsPage() {
                 <section id="introduction" className="scroll-mt-24">
                   <h2 className="text-3xl font-bold mt-12 mb-6" style={{ color: '#81ba00' }}>1. Introduction and Agreement</h2>
                   <p>
-                    Welcome to Oksingreen. These Terms and Conditions (&quot;Terms&quot;) govern your use of the website located at https://oksingreen.com/ (hereinafter &quot;the Website&quot;), which is owned and operated by Oksingreen Pvt. Ltd., a company incorporated in India with its principal address in Indore, Madhya Pradesh (hereinafter &quot;the Company,&quot; &quot;We,&quot; &quot;Us,&quot; or &quot;Our&quot;).
+                    Welcome to Agrikrishi Farms. These Terms and Conditions (&quot;Terms&quot;) govern your use of the website located at (to be provided) (hereinafter &quot;the Website&quot;), which is owned and operated by Agrikrishi Farms, a company incorporated in India with its principal address in Indore (hereinafter &quot;the Company,&quot; &quot;We,&quot; &quot;Us,&quot; or &quot;Our&quot;).
                   </p>
                   <p>
                     By accessing, browsing, or using the Website, you acknowledge that you have read, understood, and agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you must not access or use the Website.
@@ -374,7 +374,7 @@ export default function TermsAndConditionsPage() {
                 <section id="intellectual-property" className="scroll-mt-24">
                   <h2 className="text-3xl font-bold mt-12 mb-6" style={{ color: '#81ba00' }}>2. Intellectual Property Rights</h2>
                   <p>
-                    The Website and its entire contents, features, and functionality—including but not limited to all information, software, text, displays, images, video, audio, logos, visual designs, trademarks, and the design, selection, and arrangement thereof (hereinafter &quot;Content&quot;)—are the exclusive property of Oksingreen Pvt. Ltd. and are protected by Indian and international copyright, trademark, and other intellectual property laws.
+                    The Website and its entire contents, features, and functionality—including but not limited to all information, software, text, displays, images, video, audio, logos, visual designs, trademarks, and the design, selection, and arrangement thereof (hereinafter &quot;Content&quot;)—are the exclusive property of Agrikrishi Farms and are protected by Indian and international copyright, trademark, and other intellectual property laws.
                   </p>
                   <p>
                     You are granted a limited, non-exclusive, non-transferable license to access the Website for your personal, non-commercial use. You must not reproduce, distribute, modify, create derivative works of, publicly display, republish, or otherwise exploit any of the Content without our prior written consent.
@@ -430,7 +430,7 @@ export default function TermsAndConditionsPage() {
 
                   <h4 className="text-xl font-bold mt-6 mb-3" style={{ color: '#81ba00' }}>4.5. Retention of title</h4>
                   <p>
-                    All products supplied to the Purchaser shall remain the sole and exclusive property of Oksingreen Pvt. Ltd. until the full sales amount, including any outstanding balance, is fully realized and received by the Company.
+                    All products supplied to the Purchaser shall remain the sole and exclusive property of Agrikrishi Farms until the full sales amount, including any outstanding balance, is fully realized and received by the Company.
                   </p>
 
                   <h4 className="text-xl font-bold mt-6 mb-3" style={{ color: '#81ba00' }}>4.6. Return and Refund Policy</h4>
@@ -440,7 +440,7 @@ export default function TermsAndConditionsPage() {
 
                   <h4 className="text-xl font-bold mt-6 mb-3" style={{ color: '#81ba00' }}>4.7. No Buy-Back Policy</h4>
                   <p>
-                    The Company provides no guarantee, representation, or agreement, express or implied, for &quot;buy-back.&quot; Oksingreen Pvt. Ltd. is under no obligation to purchase crops, timber, or any produce generated from the plants it sells.
+                    The Company provides no guarantee, representation, or agreement, express or implied, for &quot;buy-back.&quot; Agrikrishi Farms is under no obligation to purchase crops, timber, or any produce generated from the plants it sells.
                   </p>
 
                   <h4 className="text-xl font-bold mt-6 mb-3" style={{ color: '#81ba00' }}>4.8. Verification and Technician Fees</h4>
@@ -456,7 +456,7 @@ export default function TermsAndConditionsPage() {
                 <section id="replacement-policy" className="scroll-mt-24">
                   <h2 className="text-3xl font-bold mt-12 mb-6" style={{ color: '#81ba00' }}>5. Plant Replacement Policy</h2>
                   <p>
-                    This policy outlines the terms of replacement for plant(s) purchased directly from Oksingreen Pvt. Ltd. (hereinafter &quot;Purchaser&quot; or &quot;Client&quot;).
+                    This policy outlines the terms of replacement for plant(s) purchased directly from Agrikrishi Farms (hereinafter &quot;Purchaser&quot; or &quot;Client&quot;).
                   </p>
 
                   <h3 className="text-2xl font-bold mt-8 mb-4" style={{ color: '#81ba00' }}>5.1. Eligibility and Verification</h3>
@@ -497,7 +497,7 @@ export default function TermsAndConditionsPage() {
                 <section id="feedback" className="scroll-mt-24">
                   <h2 className="text-3xl font-bold mt-12 mb-6" style={{ color: '#81ba00' }}>6. Feedback and Suggestions</h2>
                   <p>
-                    Any feedback, comments, ideas, or suggestions you provide to the Company (hereinafter &quot;Feedback&quot;) shall become the sole and exclusive property of Oksingreen Pvt. Ltd. We shall be free to use, implement, disclose, reproduce, or otherwise exploit such Feedback for any purpose whatsoever, commercial or otherwise, without any obligation to provide compensation or credit to you.
+                    Any feedback, comments, ideas, or suggestions you provide to the Company (hereinafter &quot;Feedback&quot;) shall become the sole and exclusive property of Agrikrishi Farms. We shall be free to use, implement, disclose, reproduce, or otherwise exploit such Feedback for any purpose whatsoever, commercial or otherwise, without any obligation to provide compensation or credit to you.
                   </p>
                 </section>
 
@@ -516,7 +516,7 @@ export default function TermsAndConditionsPage() {
                     The Website is provided on an &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; basis. The Company makes no representations or warranties of any kind, express or implied, as to the operation of the Website or the information or content included on it.
                   </p>
                   <p>
-                    In no event shall Oksingreen Pvt. Ltd., its directors, employees, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages arising out of your use of the Website or any products or services purchased from us.
+                    In no event shall Agrikrishi Farms, its directors, employees, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages arising out of your use of the Website or any products or services purchased from us.
                   </p>
                 </section>
 
@@ -541,9 +541,9 @@ export default function TermsAndConditionsPage() {
                   <h2 className="text-3xl font-bold mt-12 mb-6" style={{ color: '#81ba00' }}>11. Contact Information</h2>
                   <p>For any questions or clarifications regarding these Terms & Conditions, please contact us:</p>
                   <ul className="list-disc pl-6 space-y-2 mt-4">
-                    <li>By email: <a href="mailto:Contact@oksingreen.com" className="underline" style={{ color: '#81ba00' }} onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'} onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}>Contact@oksingreen.com</a></li>
-                    <li>By phone: +91 8815 069 927</li>
-                    <li>By website: <a href="https://oksingreen.com/contact/" className="underline" style={{ color: '#81ba00' }} onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'} onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}>https://oksingreen.com/contact/</a></li>
+                    <li>By email: <a href="mailto:info@agrikrishifarms.com" className="underline" style={{ color: '#81ba00' }} onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'} onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}>info@agrikrishifarms.com</a></li>
+                    <li>By phone: 79873 84443</li>
+                    <li>By website: <a href="/contact" className="underline" style={{ color: '#81ba00' }} onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'} onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}>Contact Page</a></li>
                   </ul>
                 </section>
               </div>

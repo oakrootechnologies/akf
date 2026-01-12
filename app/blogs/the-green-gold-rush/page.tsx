@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import NavbarMain from '@/components/NavbarMain'
 import Footer from '@/components/Footer'
-import { Calendar, Clock, Share2, Play, TrendingUp, Tag } from 'lucide-react'
+import { Calendar, Clock, Share2, Play } from 'lucide-react'
 import { useState } from 'react'
 
 export default function BlogPostPage() {
@@ -13,10 +13,10 @@ export default function BlogPostPage() {
     title: "The Green Gold Rush: How Horticulture & Agroforestry Decrease Carbon Consumption and Attract Smart Investment",
     mainImage: "/realblog/1 MAIN.webp",
     video: "/realblog/1.mp4",
-    date: "January 15, 2024",
+    date: "November 29, 2025",
     readTime: "8 min read",
     category: "Horticulture",
-    author: "Oksingreen Team",
+    author: "Agrikrishi Farms Team",
     content: {
       introduction: "For decades, the conversation around farming has been about yield. How much can we grow? How fast? But today, a new, more urgent question has taken center stage: How can we grow sustainably? The pressure is on. Consumers are demanding eco-friendly products, regulations are tightening around emissions, and our climate is sending clear distress signals. Traditional agriculture, with its heavy reliance on tilling, monocropping, and synthetic fertilizers, is a significant part of the global carbon problem. But what if the solution wasn't just to reduce agriculture's carbon footprint, but to reverse it? Enter horticulture and agroforestry. These aren't just farming methods; they are powerful carbon-capture technologies disguised as farms. And for savvy farmers and forward-thinking investors, they represent one of the biggest economic opportunities of the 21st century.",
       sections: [
@@ -61,25 +61,6 @@ export default function BlogPostPage() {
       conclusion: "The old model of agriculture is running on fumes. It degrades soil, consumes massive amounts of fossil fuels, and is dangerously vulnerable to the climate it helped to change. Horticulture and agroforestry are the future. They are a \"shovel-ready\" technology that builds soil, cleans the air, produces high-value food, and creates resilient communities. For farmers, it's a chance to become more profitable and secure. For investors, it's a chance to fund a real, scalable solution to our carbon problem—and reap the financial rewards of doing so. The green gold rush is here. It's not in a mine or a microchip; it's in the soil beneath our feet."
     }
   }
-
-  const relatedPosts = [
-    {
-      id: 2,
-      slug: 'beyond-the-harvest',
-      title: "Beyond the Harvest: Why Healthy Soil is Horticulture's Greatest Long-Term Asset",
-      mainImage: "/realblog/2 MAIN.png",
-      date: "February 20, 2024",
-      readTime: "10 min read"
-    },
-    {
-      id: 3,
-      slug: 'traditional-vs-horticulture-farming',
-      title: "Is a 1-Acre Garden Worth More Than a 100-Acre Field?",
-      mainImage: "/realblog/3 MAIN.JPG",
-      date: "March 10, 2024",
-      readTime: "12 min read"
-    }
-  ]
 
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
 
@@ -273,63 +254,6 @@ export default function BlogPostPage() {
                 </ul>
               </div>
 
-              {/* Related Posts */}
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-4 font-serif flex items-center gap-2">
-                  <TrendingUp className="w-5 h-5 text-[#81ba00]" />
-                  Related Posts
-                </h3>
-                <ul className="space-y-4">
-                  {relatedPosts.map((post) => (
-                    <li key={post.id}>
-                      <Link 
-                        href={`/blogs/${post.slug}`}
-                        className="group flex gap-3 hover:opacity-80 transition-opacity"
-                      >
-                        <div className="flex-shrink-0 w-20 h-20 rounded overflow-hidden">
-                          <img
-                            src={post.mainImage}
-                            alt={post.title}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="text-sm font-semibold text-gray-900 line-clamp-2 group-hover:text-[#81ba00] transition-colors">
-                            {post.title}
-                          </p>
-                          <p className="text-xs text-gray-500 mt-1">{post.date}</p>
-                        </div>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Categories */}
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-4 font-serif flex items-center gap-2">
-                  <Tag className="w-5 h-5 text-[#81ba00]" />
-                  Categories
-                </h3>
-                <ul className="space-y-2">
-                  <li>
-                    <Link href="/blogs?category=Horticulture" className="text-gray-600 hover:text-[#81ba00] transition-colors text-sm block py-2">
-                      Horticulture
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/blogs?category=Agroforestry" className="text-gray-600 hover:text-[#81ba00] transition-colors text-sm block py-2">
-                      Agroforestry
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/blogs?category=Farming Methods" className="text-gray-600 hover:text-[#81ba00] transition-colors text-sm block py-2">
-                      Farming Methods
-                    </Link>
-                  </li>
-                </ul>
-              </div>
             </aside>
           </div>
         </div>
@@ -347,7 +271,7 @@ export default function BlogPostPage() {
             <div className="flex-1">
               <h3 className="text-xl font-bold text-gray-900 mb-2 font-serif">{blog.author}</h3>
               <p className="text-gray-600 leading-relaxed">
-                Oksingreen Team is dedicated to providing expert insights on horticulture, agroforestry, and sustainable farming practices. Our mission is to empower farmers and investors with knowledge that drives profitability and environmental stewardship.
+                Agrikrishi Farms Team is dedicated to providing expert insights on horticulture, agroforestry, and sustainable farming practices. Our mission is to empower farmers and investors with knowledge that drives profitability and environmental stewardship.
               </p>
             </div>
           </div>

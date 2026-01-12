@@ -3,16 +3,39 @@
 import { useRef, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import type { Swiper as SwiperType } from 'swiper'
+import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
+import 'swiper/css/autoplay'
 import ProductCard from './ProductCard'
 
 export default function HeroProductsCarousel() {
   const swiperRef = useRef<SwiperType | null>(null)
-  const currentSlideRef = useRef(0)
 
   const products = [
     {
-      title: "Guava",
+      title: "Vegetable Seeds",
+      image_default: "/Website Images/generated/vegetable_seeds.png",
+      images_hover: [
+        "/Website Images/generated/vegetable_seeds.png",
+        "/Website Images/generated/vegetable_seeds.png",
+        "/Website Images/generated/vegetable_seeds.png"
+      ],
+      price: "",
+      rating: 5
+    },
+    {
+      title: "Field & Cash Crops",
+      image_default: "/Website Images/generated/field_crops.png",
+      images_hover: [
+        "/Website Images/generated/field_crops.png",
+        "/Website Images/generated/field_crops.png",
+        "/Website Images/generated/field_crops.png"
+      ],
+      price: "",
+      rating: 5
+    },
+    {
+      title: "Fruit Plantation",
       image_default: "/Website Images/guava(Hero)/Hero.jpg",
       images_hover: [
         "/Website Images/guava(Hero)/FB_IMG_1614582123664.jpg",
@@ -20,83 +43,47 @@ export default function HeroProductsCarousel() {
         "/Website Images/guava(Hero)/FB_IMG_1614582133488.jpg",
         "/Website Images/guava(Hero)/FB_IMG_1614582146811.jpg"
       ],
-      price: "$12.00",
+      price: "",
       rating: 5
     },
     {
-      title: "Dragon Fruit",
-      image_default: "/Website Images/Dragon Fruit(Hero)/Hero.jpg",
-      images_hover: [
-        "/Website Images/Dragon Fruit(Hero)/PXL_20240225_063829675.jpg",
-        "/Website Images/Dragon Fruit(Hero)/sad.webp",
-        "/Website Images/Dragon Fruit(Hero)/safadfad.webp"
-      ],
-      price: "$15.00",
-      rating: 4
-    },
-    {
-      title: "Lemon",
-      image_default: "/Website Images/lemon(Hero)/Hero.png",
-      images_hover: [
-        "/Website Images/lemon(Hero)/FB_IMG_1614582137402.jpg",
-        "/Website Images/lemon(Hero)/IMG_20210426_165324_046.jpg",
-        "/Website Images/lemon(Hero)/IMG-20210525-WA0004.jpg"
-      ],
-      price: "$8.00",
-      rating: 5
-    },
-    {
-      title: "Red Sandalwood",
+      title: "Timber & Forestry",
       image_default: "/Website Images/Sandalwood(Hero)/Red sandalwood.jpeg",
       images_hover: [
         "/Website Images/Sandalwood(Hero)/Red sandalwood.jpeg",
         "/Website Images/Sandalwood(Hero)/Red Sandalwood.png",
         "/Website Images/Sandalwood(Hero)/tractor.jpeg"
       ],
-      price: "$25.00",
-      rating: 4
-    },
-    {
-      title: "Chiku",
-      image_default: "/Website Images/chiku (Hero)/Hero.jpg",
-      images_hover: [
-        "/Website Images/chiku (Hero)/20210114_120925.jpg",
-        "/Website Images/chiku (Hero)/chiku tree.jpg",
-        "/Website Images/chiku (Hero)/chiku2.webp"
-      ],
-      price: "$10.00",
+      price: "",
       rating: 5
     }
   ]
 
-  // Auto-scroll between position 0 (cards 1-2-3-4) and position 1 (cards 2-3-4-5)
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (swiperRef.current) {
-        // Alternate between slide 0 and slide 1
-        const nextSlide = currentSlideRef.current === 0 ? 1 : 0
-        swiperRef.current.slideTo(nextSlide)
-        currentSlideRef.current = nextSlide
-      }
-    }, 3000) // Change slide every 3 seconds
-
-    return () => clearInterval(interval)
-  }, [])
+  // Duplicate products to create seamless loop: 1234 -> 2345 -> 3451 -> 4512 -> 5123 -> 1234...
+  // This creates overlapping slides for continuous looping
+  const duplicatedProducts = [...products, ...products, ...products]
 
   return (
     <div className="relative z-30 bg-transparent">
-      <div className="w-full max-w-[1200px] mx-auto px-6 md:px-8 lg:px-12">
+      <div className="w-full max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 xl:px-12">
         {/* Carousel Container */}
         <div className="relative">
           <Swiper
             onSwiper={(swiper) => {
               swiperRef.current = swiper
             }}
+            modules={[Autoplay]}
             spaceBetween={16}
-            slidesPerView={1}
+            slidesPerView={1.2}
+            loop={true}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false,
+            }}
             breakpoints={{
               640: {
-                slidesPerView: 2,
+                slidesPerView: 1.5,
                 spaceBetween: 16,
               },
               768: {
@@ -110,7 +97,7 @@ export default function HeroProductsCarousel() {
             }}
             className="hero-products-swiper relative z-30"
           >
-            {products.map((product, index) => (
+            {duplicatedProducts.map((product, index) => (
               <SwiperSlide key={index}>
                 <div className="hero-scale mx-auto">
                   <ProductCard

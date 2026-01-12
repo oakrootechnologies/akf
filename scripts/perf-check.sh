@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Performance Check Script for Oksingreen
+# Performance Check Script for Agrikrishi Farms
 # This script builds the project and runs Lighthouse CI for performance testing
 
 set -e

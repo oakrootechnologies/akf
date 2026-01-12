@@ -23,11 +23,9 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="bg-primary-500 p-2 rounded-lg">
-              <Leaf className="h-6 w-6 text-white" />
-            </div>
+            <div className="w-10 h-10 rounded-full bg-green-600"></div>
             <span className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-green-600 bg-clip-text text-transparent">
-              OksinGreen
+              Agrikrishi Farms
             </span>
           </div>
 

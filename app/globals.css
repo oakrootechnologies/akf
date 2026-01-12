@@ -12,8 +12,6 @@
   }
   body {
     @apply font-sans bg-white text-gray-800;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 }
 
@@ -41,9 +39,42 @@
   background: #16a34a;
 }
 
-/* Smooth scrolling */
+/* Smooth scrolling - Enhanced for butter smooth experience */
 html {
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding-top: 80px;
+}
+
+* {
+  scroll-behavior: inherit;
+}
+
+/* Enhanced scroll performance and rendering */
+body {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: none;
+}
+
+/* Smooth scrolling for all scrollable elements */
+[data-scroll-container],
+.scroll-container,
+.overflow-auto,
+.overflow-y-auto,
+.overflow-x-auto {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Smooth scroll for all scrollable containers */
+.scroll-smooth {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Hero Slider - Ensure full image height is visible */
@@ -73,5 +104,33 @@ html {
 
 .font-mohr-rounded {
   font-family: 'MohrRoundedAlt-Bold', 'Poppins', sans-serif;
+}
+
+/* Content Protection - Prevent image and video downloads */
+img,
+video,
+picture {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -webkit-user-drag: none !important;
+  -khtml-user-drag: none !important;
+  -moz-user-drag: none !important;
+  -o-user-drag: none !important;
+  user-drag: none !important;
+  pointer-events: auto !important;
+}
+
+img::selection,
+video::selection,
+picture::selection {
+  background: transparent !important;
+}
+
+img::-moz-selection,
+video::-moz-selection,
+picture::-moz-selection {
+  background: transparent !important;
 }
 

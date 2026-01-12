@@ -12,37 +12,37 @@ export default function AboutPage() {
   const reviews = [
     {
       id: 1,
-      text: "Oksingreen provides the highest quality saplings. Our yield has doubled since we started using their plants. The support team is always available to help with any questions.",
+      text: "Agrikrishi Farms provides the highest quality saplings. Our yield has doubled since we started using their plants. The support team is always available to help with any questions.",
       author: "Rajesh Kumar",
       rating: 5
     },
     {
       id: 2,
-      text: "Excellent service and premium quality plants. The agroforestry trees we purchased are growing beautifully. Oksingreen has become our trusted partner for all our agricultural needs.",
+      text: "Excellent service and premium quality plants. The agroforestry trees we purchased are growing beautifully. Agrikrishi Farms has become our trusted partner for all our agricultural needs.",
       author: "Priya Sharma",
       rating: 5
     },
     {
       id: 3,
-      text: "The Mahogany saplings I bought from Oksingreen are thriving exceptionally well. Their expert guidance on plantation techniques has been invaluable. Highly recommended for serious farmers.",
+      text: "The Mahogany saplings I bought from Agrikrishi Farms are thriving exceptionally well. Their expert guidance on plantation techniques has been invaluable. Highly recommended for serious farmers.",
       author: "Amit Patel",
       rating: 5
     },
     {
       id: 4,
-      text: "Outstanding quality and customer service! The fruit trees we planted are already showing promising growth. Oksingreen's commitment to quality is evident in every plant they deliver.",
+      text: "Outstanding quality and customer service! The fruit trees we planted are already showing promising growth. Agrikrishi Farms's commitment to quality is evident in every plant they deliver.",
       author: "Sunita Devi",
       rating: 5
     },
     {
       id: 5,
-      text: "As a commercial orchard owner, I've tried many suppliers, but Oksingreen stands out. Their hybrid varieties are superior, and the post-purchase support is exceptional. Worth every rupee!",
+      text: "As a commercial orchard owner, I've tried many suppliers, but Agrikrishi Farms stands out. Their hybrid varieties are superior, and the post-purchase support is exceptional. Worth every rupee!",
       author: "Vikram Singh",
       rating: 5
     },
     {
       id: 6,
-      text: "The Sandalwood plants from Oksingreen are of premium quality. Their team provided detailed care instructions and continues to support us. This is a company that truly cares about farmers' success.",
+      text: "The Sandalwood plants from Agrikrishi Farms are of premium quality. Their team provided detailed care instructions and continues to support us. This is a company that truly cares about farmers' success.",
       author: "Meera Reddy",
       rating: 5
     }
@@ -82,24 +82,15 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Left Column (Image Block) */}
-            <div className="relative rounded-xl shadow-lg p-4 md:p-8 overflow-hidden">
-              {/* Dark Green Leafy Background */}
-              <div 
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{
-                  backgroundImage: `url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxwYXR0ZXJuIGlkPSJsZWFmX3BhdHRlcm4iIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4KICAgICAgPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiMxYTQwMWMiLz4KICAgICAgPGVsbGlwc2UgY3g9IjIwIiBjeT0iMzAiIHJ4PSIxNSIgcnk9IjI1IiBmaWxsPSIjMjI4YjUzIiBvcGFjaXR5PSIwLjciLz4KICAgICAgPGVsbGlwc2UgY3g9IjgwIiBjeT0iMjAiIHJ4PSIxMiIgcnk9IjIwIiBmaWxsPSIjMTZhMzQxIiBvcGFjaXR5PSIwLjgiLz4KICAgICAgPGVsbGlwc2UgY3g9IjUwIiBjeT0iNzAiIHJ4PSIxOCIgcnk9IjMwIiBmaWxsPSIjMjI4YjUzIiBvcGFjaXR5PSIwLjYiLz4KICAgICAgPGVsbGlwc2UgY3g9IjMwIiBjeT0iODAiIHJ4PSIxNCIgcnk9IjIyIiBmaWxsPSIjMTZhMzQxIiBvcGFjaXR5PSIwLjc1Ii8+CiAgICAgIDxlbGxpcHNlIGN4PSI3MCIgY3k9IjkwIiByeD0iMTYiIHJ5PSIyNSIgZmlsbD0iIzIyOGI1MyIgb3BhY2l0eT0iMC42NSIvPgogICAgPC9wYXR0ZXJuPgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNsZWFmX3BhdHRlcm4pIi8+Cjwvc3ZnPg==')`
-                }}
-              />
-              <div className="absolute inset-0 bg-black/75" />
-              
+            <div className="relative">
               {/* Image */}
-              <div className="relative z-10">
                 <img 
-                  src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&h=600&fit=crop" 
-                  alt="Oksingreen Products" 
-                  className="w-full h-auto rounded-lg"
+                src="/realblog/3 MAIN.JPG" 
+                  alt="Who We Are - Agrikrishi Farms Premium Plants and Fruits" 
+                className="w-full h-auto rounded-lg shadow-lg object-cover"
+                loading="lazy"
+                decoding="async"
                 />
-              </div>
             </div>
 
             {/* Right Column (Text Block) */}
@@ -109,7 +100,7 @@ export default function AboutPage() {
               </h2>
               <div className="mt-6 space-y-4 text-gray-700">
                 <p>
-                  At Oksingreen, we stand at the intersection where tradition meets technology. We believe that true agricultural prosperity begins with the right foundation: the seed.
+                  At Agrikrishi Farms, we stand at the intersection where tradition meets technology. We believe that true agricultural prosperity begins with the right foundation: the seed.
                 </p>
                 <p>
                   We are more than just a plant supplier; we are partners in your growth story. We recognize that for the modern Indian farmer, horticulture and agroforestry are not just about planting trees—they are about building assets, securing wealth, and preserving our environment for the next generation.
@@ -118,7 +109,7 @@ export default function AboutPage() {
                   Our mission is simple but ambitious: to bridge the gap between subsistence farming and commercial success. We achieve this by providing elite, scientifically-developed hybrid saplings engineered for high yield, rapid growth, and climate resilience. From high-value timber like Mahogany and Sandalwood to premium fruit varieties, every plant in our inventory is a promise of quality.
                 </p>
                 <p>
-                  But our commitment goes beyond the soil. We empower our community with expert agronomy guidance, unwavering support, and a shared vision for a greener, wealthier India. When you plant with Oksingreen, you aren&apos;t just growing a crop; you are growing a legacy.
+                  But our commitment goes beyond the soil. We empower our community with expert agronomy guidance, unwavering support, and a shared vision for a greener, wealthier India. When you plant with Agrikrishi Farms, you aren&apos;t just growing a crop; you are growing a legacy.
                 </p>
               </div>
             </div>
@@ -142,34 +133,34 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {/* Our Vision */}
             <div className="relative">
-              {/* Green Banner Header */}
-              <div className="bg-[#81ba00] rounded-t-lg px-6 py-3 mb-0 relative z-20">
-                <h3 className="text-white font-bold text-xl md:text-2xl font-sans">
-                  Our Vision
-                </h3>
+              {/* White Content Card */}
+              <div className="bg-white rounded-lg p-6 md:p-8 relative z-10 pt-12 md:pt-14">
+                {/* Green Banner Header - Overlapping top */}
+                <div className="bg-[#81ba00] rounded-lg px-4 py-2 absolute -top-4 left-1/2 transform -translate-x-1/2 z-20 w-auto min-w-[140px]">
+                  <h3 className="text-white font-bold text-base md:text-lg font-sans text-center whitespace-nowrap">
+                    Our Vision
+                  </h3>
         </div>
 
-              {/* White Content Card */}
-              <div className="bg-white border border-black rounded-b-lg rounded-t-none p-6 md:p-8 relative -mt-2 z-10">
                 <p className="text-gray-900 text-base md:text-lg leading-relaxed font-sans">
-                  To create a future where every acre of Indian land is a source of sustainable wealth and ecological balance. We envision a transformed agricultural landscape where advanced horticulture empowers farmers to thrive while healing the planet & want to be the driving force behind a greener, wealthier India.
+                  To create a future where every acre of Indian land is a source of sustainable wealth and eco-logical balance. We envision a transformed agricultural land-scape where advanced horti-culture empowers farmers to achieve financial prosperity while healing the planet & want to be the driving force behind a greener, wealthier India.
                 </p>
               </div>
             </div>
 
             {/* Our Mission */}
             <div className="relative">
-              {/* Green Banner Header */}
-              <div className="bg-[#81ba00] rounded-t-lg px-6 py-3 mb-0 relative z-20">
-                <h3 className="text-white font-bold text-xl md:text-2xl font-sans">
-                  Our Mission
-                </h3>
-              </div>
-              
               {/* White Content Card */}
-              <div className="bg-white border border-black rounded-b-lg rounded-t-none p-6 md:p-8 relative -mt-2 z-10">
+              <div className="bg-white rounded-lg p-6 md:p-8 relative z-10 pt-12 md:pt-14">
+                {/* Green Banner Header - Overlapping top */}
+                <div className="bg-[#81ba00] rounded-lg px-4 py-2 absolute -top-4 left-1/2 transform -translate-x-1/2 z-20 w-auto min-w-[140px]">
+                  <h3 className="text-white font-bold text-base md:text-lg font-sans text-center whitespace-nowrap">
+                    Our Mission
+                  </h3>
+                </div>
+                
                 <p className="text-gray-900 text-base md:text-lg leading-relaxed font-sans">
-                  To transform Indian agriculture through innovation in hybrid horticulture and sustainable agroforestry. Bridge the gap between farming and wealth creation. We aim to empower farmers with high-value plants that deliver both financial stability and environmental restoration.
+                  To transform Indian agricul-ture through innovation in hybrid horticulture and sus-tainable agroforestry.bridge the gap between farming and wealth creation. We aim to empower farmers with scientifically developed, high-value plants that deliv-er both financial stability and environmental restoration.
                 </p>
               </div>
             </div>

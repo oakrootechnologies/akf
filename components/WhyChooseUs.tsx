@@ -11,7 +11,7 @@ export default function WhyChooseUs() {
     {
       title: "Free Shipping",
       description: "No extra Hidden charges for your plants, As we are providing free of cost delivery.",
-      icon: <Leaf className="w-10 h-10 md:w-12 md:h-12 text-green-600" />,
+      icon: <Leaf className="w-10 h-10 md:w-12 md:h-12 text-primary-600" />,
       iconBgColor: "bg-green-100",
       alignment: 'right' as const
     },
@@ -32,7 +32,7 @@ export default function WhyChooseUs() {
     {
       title: "24x7 Support",
       description: "We provide on call instant assistance for any convenience and Query.",
-      icon: <Headphones className="w-10 h-10 md:w-12 md:h-12 text-yellow-600" />,
+      icon: <Headphones className="w-10 h-10 md:w-12 md:h-12 text-white" />,
       iconBgColor: "bg-yellow-100",
       alignment: 'left' as const
     }
@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
         {/* Section Header */}
         <div className="w-full max-w-[1238px] mx-auto px-4 text-center mb-12">
           <h2 className="font-sans text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-2">
-            Welcome To Oksingreen
+            Welcome To Agrikrishi Farms
           </h2>
           <p className="font-sans text-xl md:text-2xl text-white text-center mt-2">
             Quality Horticulture & Agroforestry Products

@@ -160,7 +160,12 @@ export default function OptimizedImage({
   // If using picture element for format fallback
   if (usePicture) {
     return (
-      <picture className={className} style={aspectRatioStyle}>
+      <picture
+        className={className}
+        style={aspectRatioStyle}
+        onContextMenu={(e) => e.preventDefault()}
+        onDragStart={(e) => e.preventDefault()}
+      >
         {/* AVIF source */}
         <source
           type="image/avif"
@@ -174,12 +179,42 @@ export default function OptimizedImage({
           sizes={sizes}
         />
         {/* Fallback image */}
-        <Image {...imageProps} />
+        <Image
+          {...imageProps}
+          onContextMenu={(e) => e.preventDefault()}
+          onDragStart={(e) => e.preventDefault()}
+          draggable={false}
+          style={{
+            ...imageProps.style,
+            userSelect: 'none',
+            WebkitUserSelect: 'none' as any,
+            MozUserSelect: 'none' as any,
+            msUserSelect: 'none' as any,
+            WebkitUserDrag: 'none' as any,
+            userDrag: 'none' as any,
+          } as unknown as React.CSSProperties}
+        />
       </picture>
     )
   }
 
-  // Standard optimized image
-  return <Image {...imageProps} />
+  // Standard optimized image with protection
+  return (
+    <Image
+      {...imageProps}
+      onContextMenu={(e) => e.preventDefault()}
+      onDragStart={(e) => e.preventDefault()}
+      draggable={false}
+      style={{
+        ...imageProps.style,
+        userSelect: 'none',
+        WebkitUserSelect: 'none' as any,
+        MozUserSelect: 'none' as any,
+        msUserSelect: 'none' as any,
+        WebkitUserDrag: 'none' as any,
+        userDrag: 'none' as any,
+      } as unknown as React.CSSProperties}
+    />
+  )
 }
 

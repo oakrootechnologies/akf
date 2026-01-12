@@ -1,0 +1,1158 @@
+[
+  {
+    "crop": "Bitter Gourd",
+    "variety": "Batuk",
+    "specs": {
+      "Days to first picking": "45-50 DAS",
+      "Fruit colour": "Dark green",
+      "Fruit Shape": "Spindle",
+      "Fruit Weight": "45-50 gm",
+      "Fruit Length": "10-12 cm",
+      "Product Slot": "Small Spiny",
+      "Market Slot": "US 1315, SW 890",
+      "Recommended": "All over India"
+    }
+  },
+  {
+    "crop": "Bitter Gourd",
+    "variety": "Vachan 208",
+    "specs": {
+      "Days to first picking": "50-55 DAS",
+      "Fruit colour": "Dark green",
+      "Fruit Shape": "Spindle",
+      "Fruit Weight": "50-60 gm",
+      "Fruit Length": "12-14 cm",
+      "Product Slot": "Small Spiny",
+      "Market Slot": "US 1315, SW 890",
+      "Recommended": "All over India"
+    }
+  },
+  {
+    "crop": "Bitter Gourd",
+    "variety": "VBTH-01490",
+    "specs": {
+      "Days to first picking": "40-42 DAS",
+      "Fruit colour": "Dark green",
+      "Fruit Shape": "Elongated",
+      "Fruit Weight": "125-150 gm",
+      "Fruit Length": "18-22 cm",
+      "Product Slot": "Medium Spiny",
+      "Market Slot": "Navdhan,VNR 22,222",
+      "Recommended": "All over India"
+    }
+  },
+  {
+    "crop": "Bitter Gourd",
+    "variety": "Bond-777",
+    "specs": {
+      "Days to first picking": "50-55 DAS",
+      "Fruit colour": "Dark green",
+      "Fruit Shape": "Elongated",
+      "Fruit Weight": "120-130 gm",
+      "Fruit Length": "18-20 cm",
+      "Product Slot": "Medium long",
+      "Market Slot": "Pragati,Monarch",
+      "Recommended": "All over India"
+    }
+  },
+  {
+    "crop": "Bitter Gourd",
+    "variety": "Gaurav",
+    "specs": {
+      "Days to first picking": "45-50 DAS",
+      "Fruit colour": "Green",
+      "Fruit Shape": "Elongated",
+      "Fruit Weight": "150-160 gm",
+      "Fruit Length": "22-25 cm",
+      "Product Slot": "Medium spiny",
+      "Market Slot": "Amanshri, VNR 77",
+      "Recommended": "All over India"
+    }
+  },
+  {
+    "crop": "Bitter Gourd",
+    "variety": "Naina",
+    "specs": {
+      "Days to first picking": "50-55 DAS",
+      "Fruit colour": "Shiny green",
+      "Fruit Shape": "Elongated",
+      "Fruit Weight": "100-120",
+      "Fruit Length": "16-20 cm",
+      "Product Slot": "Spiny medium",
+      "Market Slot": "Akash, Sagar",
+      "Recommended": "All over India"
+    }
+  },
+  {
+    "crop": "Bitter Gourd",
+    "variety": "Jhalar",
+    "specs": {
+      "Days to first picking": "50-55 DAS",
+      "Fruit colour": "Dark green",
+      "Fruit Shape": "Thin long",
+      "Fruit Weight": "150-160 gm",
+      "Fruit Length": "30-35 cm",
+      "Product Slot": "Smooth long",
+      "Market Slot": "Nagesh, Jhalari, Lavanya",
+      "Recommended": "All over India"
+    }
+  },
+  {
+    "crop": "Bottle Gourd",
+    "variety": "Vachan-1830",
+    "specs": {
+      "1st Harvest": "45-50 DAS",
+      "Fruit colour": "Dark green with Shiny",
+      "Fruit Shape": "Cylindrical Medium",
+      "Fruit Weight": "600-750 gm",
+      "Product Slot": "Medium Cylindrical",
+      "Market Slot": "Haruna"
+    }
+  },
+  {
+    "crop": "Bottle Gourd",
+    "variety": "SUMO",
+    "specs": {
+      "1st Harvest": "50-55 DAS",
+      "Fruit Length": "40-42 cm",
+      "Fruit colour": "Shiny Green",
+      "Fruit Shape": "Cylindrical",
+      "Fruit Weight": "750-800 gm",
+      "Product Slot": "",
+      "Market Slot": ""
+    }
+  },
+  {
+    "crop": "Bottle Gourd",
+    "variety": "Raftaar",
+    "specs": {
+      "1st Harvest": "42-45 DAS",
+      "Fruit Length": "32-35 cm",
+      "Fruit colour": "Shiny Green",
+      "Fruit Shape": "Cylindrical",
+      "Fruit Weight": "600-700 gm",
+      "Product Slot": "",
+      "Market Slot": ""
+    }
+  },
+  {
+    "crop": "Bottle Gourd",
+    "variety": "Hareli",
+    "specs": {
+      "1st Harvest": "50-55 DAS",
+      "Fruit Length": "20-24 cm",
+      "Fruit colour": "Attractive Green",
+      "Fruit Shape": "Bulb with neck",
+      "Fruit Weight": "500-700 gm",
+      "Product Slot": "",
+      "Market Slot": ""
+    }
+  },
+  {
+    "crop": "Bottle Gourd",
+    "variety": "Bhim",
+    "specs": {
+      "1st Harvest": "60-65 DAS",
+      "Fruit Length": "18-20 cm",
+      "Fruit colour": "Green",
+      "Fruit Shape": "Bulb",
+      "Fruit Weight": "500-600 gm",
+      "Product Slot": "",
+      "Market Slot": ""
+    }
+  },
+  {
+    "crop": "Bottle Gourd",
+    "variety": "Natwar",
+    "specs": {
+      "1st Harvest": "50-55 DAS",
+      "Fruit Length": "8-10 cm",
+      "Fruit colour": "Green",
+      "Fruit Shape": "Flat round",
+      "Fruit Weight": "600-700 gm",
+      "Product Slot": "",
+      "Market Slot": "",
+      "Yield potential": ", Green colour,"
+    }
+  },
+  {
+    "crop": "Bottle Gourd",
+    "variety": "Vachan-2165",
+    "specs": {
+      "1st Harvest": "60-65 DAS",
+      "Fruit Length": "16-18 cm",
+      "Fruit colour": "Mottled Green",
+      "Fruit Shape": "Flat round",
+      "Fruit Weight": "2-3.5 Kg",
+      "Product Slot": "",
+      "Market Slot": "",
+      "Days to Maturity": "65-70 DAS",
+      "Recommendation": "All over India",
+      "MarketSegment": ""
+    }
+  },
+  {
+    "crop": "Pumpkin",
+    "variety": "Aakash",
+    "specs": {
+      "Days to Maturity": "70-75 DAS",
+      "Fruit colour": "Mottled Green",
+      "Fruit Shape": "Flat round",
+      "Fruit Weight": "4-5 Kg",
+      "Recommendation": "All over India",
+      "MarketSegment": ""
+    }
+  },
+  {
+    "crop": "Pumpkin",
+    "variety": "Aaditya F1",
+    "specs": {}
+  },
+  {
+    "crop": "PUMPKIN",
+    "variety": "Chakradhari",
+    "specs": {
+      "Days to Maturity": "80-85 DAS",
+      "Fruit colour": "Mottled Green",
+      "Fruit Shape": "Flattish",
+      "Recommendation": "All over India",
+      "Market Segment": "Paradise"
+    }
+  },
+  {
+    "crop": "Pumpkin",
+    "variety": "Parth",
+    "specs": {
+      "Days to Maturity": "75-80 DAS",
+      "Fruit colour": "Mottled Dark Green",
+      "Fruit Shape": "Round",
+      "Recommendation": "All over India",
+      "Market Segment": "Arjuna(EW)",
+      "Fruit Weight": "5-7 Kg",
+      "MarketSegment": ""
+    }
+  },
+  {
+    "crop": "Pumpkin",
+    "variety": "Globe",
+    "specs": {}
+  },
+  {
+    "crop": "Pumpkin",
+    "variety": "Lambodhar",
+    "specs": {
+      "Days to Maturity": "80-85 DAS",
+      "Fruit colour": "Mottle Green",
+      "Fruit Shape": "Oblong",
+      "Fruit Weight": "6-7 kg",
+      "Recommendation": "All over India",
+      "MarketSegment": ""
+    }
+  },
+  {
+    "crop": "Pumpkin",
+    "variety": "Chirayu",
+    "specs": {
+      "Days to Maturity": "80-85 DAS",
+      "Fruit colour": "Dark Mottle Green",
+      "Fruit Shape": "Flat round",
+      "Fruit Weight": "/fruit1.5 to 2.5 Kg",
+      "Recommendation": "All India",
+      "MarketSegment": "",
+      "Market Segment": "Golden Baby(Hyveg)"
+    }
+  },
+  {
+    "crop": "Pumpkin",
+    "variety": "Goldy 0428 F1",
+    "specs": {
+      "Days to Maturity": "85-90 DAS",
+      "Fruit colour": "Light yellow orange",
+      "Fruit Shape": "Flat  round with",
+      "Fruit Weight": "4 -5 Kg",
+      "Recommendation": "AP & TS",
+      "Market Segment": "Shaheen -Hyveg"
+    }
+  },
+  {
+    "crop": "Pumpkin",
+    "variety": "Vachan Gold",
+    "specs": {
+      "Days to Maturity": "90-100 DAS",
+      "Plant Type": "Vine",
+      "Fruit colour": "Light green with",
+      "Fruit Shape": "Oval to round",
+      "Fruit Weight": "5-7 Kgs",
+      "MarketSegment": "Sungro-"
+    }
+  },
+  {
+    "crop": "Ash gourd",
+    "variety": "Ashish",
+    "specs": {
+      "Days to first picking": "50-55 DAS",
+      "Fruit colour": "Attractive green",
+      "Fruit Shape": "Cylindrical long",
+      "Fruit Weight": "140-160 gm",
+      "Fruit Length": "28-32 cm",
+      "Recommendation": "All India"
+    }
+  },
+  {
+    "crop": "Ridge Gourd",
+    "variety": "Chaitra",
+    "specs": {
+      "Days to harvest": "75-80 DAS",
+      "Fruit Shape": "Oblong",
+      "Fruit Weight": "3 - 5 kg",
+      "Recommendation": "All over India",
+      "MarketSegment": ""
+    }
+  },
+  {
+    "crop": "Watermelon",
+    "variety": "Honey Ball",
+    "specs": {
+      "Days to first picking": "50-55 DAS",
+      "Fruit colour": "Dark Green",
+      "Fruit Shape": "Cylindrical",
+      "Fruit Weight": "100-150gm",
+      "Fruit Length": "28-32cm",
+      "Recommendation": "All Over India",
+      "MarketSegment": ""
+    }
+  },
+  {
+    "crop": "Sponge Gourd",
+    "variety": "Samridhi",
+    "specs": {
+      "Days to first picking": "45-50 DAS",
+      "Fruit colour": "Dark Green",
+      "Fruit Shape": "Cylindrical",
+      "Fruit Weight": "100-125gm",
+      "Fruit Length": "30-32 cm",
+      "Recommendation": "All Over India",
+      "MarketSegment": "s"
+    }
+  },
+  {
+    "crop": "Sponge Gourd",
+    "variety": "Saumya",
+    "specs": {
+      "Days to first picking": "50-55 DAS",
+      "Fruit colour": "Dark green",
+      "Fruit Shape": "Cylindrical",
+      "Fruit Weight": "100-120gm",
+      "Fruit Length": "25-30 cm",
+      "Recommendation": "North & Central India",
+      "MarketSegment": ""
+    }
+  },
+  {
+    "crop": "Sponge Gourd",
+    "variety": "Shakira",
+    "specs": {
+      "Days to first picking": "50-55 DAS",
+      "Fruit colour": "Light green",
+      "Fruit Shape": "Cylindrical",
+      "Fruit Weight": "120-150gm",
+      "Fruit Length": "28-32 cm",
+      "Recommendation": "North & Central",
+      "MarketSegment": ""
+    }
+  },
+  {
+    "crop": "Sponge Gourd",
+    "variety": "Aaliya",
+    "specs": {}
+  },
+  {
+    "crop": "Cucumber",
+    "variety": "Ria",
+    "specs": {
+      "Days to first picking": "42-45 DAS",
+      "Fruit colour": "Mottled dark green",
+      "Fruit Shape": "Cylindrical",
+      "Fruit Weight": "200-220 gm",
+      "Fruit Length": "18-20 cm",
+      "Recommendation": "All over India",
+      "Market Segment": "s",
+      "MarketSegment": "s"
+    }
+  },
+  {
+    "crop": "Cucumber",
+    "variety": "Runner",
+    "specs": {}
+  },
+  {
+    "crop": "CUCUMBER",
+    "variety": "Vachan 630",
+    "specs": {
+      "Days to first picking": "42-45 DAS",
+      "Fruit Length": "18-20 cm",
+      "Fruit colour": "Mottled dark green",
+      "Fruit Shape": "Cylindrical",
+      "Fruit Weight": "180-200 gm",
+      "Recommendation": "All over India",
+      "MarketSegment": "s"
+    }
+  },
+  {
+    "crop": "CUCUMBER",
+    "variety": "Swadeshi",
+    "specs": {
+      "Days to first picking": "45-48 DAS",
+      "Fruit Length": "20-22 cm",
+      "Fruit colour": "Uniform Red",
+      "Fruit Shape": "Flat Round",
+      "Fruit Weight": "90-100gm",
+      "Recommendation": "All over India",
+      "MarketSegment": "JK Desi type,",
+      "Plant Type": "Semi Determinate",
+      "Disease tolerance": "High tolerance to TLCV",
+      "Sowing Window": "Kharif,Late Kharif"
+    }
+  },
+  {
+    "crop": "Tomato",
+    "variety": "Vachan Desi",
+    "specs": {}
+  },
+  {
+    "crop": "Tomato",
+    "variety": "Preetam",
+    "specs": {
+      "Plant Type": "Semi Determinate",
+      "Fruit colour": "Uniform red",
+      "Fruit Shape": "Flat roundgreen shoulder",
+      "Fruit Weight": "90-100gm",
+      "Disease tolerance": "IR to TLCV",
+      "Sowing Window": "Kharif",
+      "MarketSegment": "Shivam,",
+      "Recommendation": "All over India"
+    }
+  },
+  {
+    "crop": "Tomato",
+    "variety": "Anirudh",
+    "specs": {
+      "1st Harvest": "50-55 DAT",
+      "Fruit colour": "Green",
+      "Fruit Dimension": "8 -8.5 x 0.9- 1 cm’s",
+      "Fruit Surface": "Semi wrinkles",
+      "Product Slot": "SHP Duel",
+      "Market Slot": "Navtej,Heena, 4884",
+      "Special features": "GoodtoleranttoLCV,",
+      "Sowing Window": "Kharif, late kharif"
+    }
+  },
+  {
+    "crop": "Hot Pepper",
+    "variety": "VHPH 109",
+    "specs": {}
+  },
+  {
+    "crop": "Hot Pepper",
+    "variety": "Rocket",
+    "specs": {
+      "1st Harvest": "50-55 DAT",
+      "Fruit colour": "Light Green",
+      "Fruit Dimension": "6-7 x1-1.1cm’s",
+      "Fruit Surface": "Semi wrinkles",
+      "Product Slot": "SHP Duel",
+      "Market Slot": "Siam Hot",
+      "Special features": "GoodtoleranttoLCV,",
+      "Sowing Window": "Kharif, late kharif"
+    }
+  },
+  {
+    "crop": "Hot Pepper",
+    "variety": "Shot Gun",
+    "specs": {
+      "1st Harvest": "50-55 DAT",
+      "Fruit colour": "Green",
+      "Fruit Dimension": "4.5-7 x 1.7-1.8",
+      "Fruit Surface": "Smooth",
+      "Product Slot": "SHP",
+      "Market Slot": "Bullet, Royal Bullet",
+      "Special features": "GoodtolerancetoLCV,",
+      "Sowing Window": "Kharif, late kharif"
+    }
+  },
+  {
+    "crop": "Hot Pepper",
+    "variety": "Kalia",
+    "specs": {
+      "1st Harvest": "50-55 DAT",
+      "Fruit colour": "Dark Purple",
+      "Fruit Dimension": "6.5-7 x 0.9- 1 cm’s",
+      "Fruit Surface": "Semi wrinkles",
+      "Product Slot": "Purple fresh",
+      "Market Slot": "Kalia",
+      "Special features": "GoodtolerancetoLCV,",
+      "Sowing Window": "Kharif, late kharif"
+    }
+  },
+  {
+    "crop": "Hot Pepper",
+    "variety": "Sunehari",
+    "specs": {
+      "1st Harvest": "45-50 DAT",
+      "Fruit colour": "Light Green",
+      "Fruit Dimension": "15-16 x 1.4-1.5",
+      "Fruit Surface": "Smooth",
+      "Product Slot": "Cayenne",
+      "Market Slot": "VNR 145, Ankur 930",
+      "Special features": "Early picking, good yield",
+      "Sowing Window": "Kharif, late kharif"
+    }
+  },
+  {
+    "crop": "Hot Pepper",
+    "variety": "Shakti",
+    "specs": {
+      "1st Harvest": "50-55 DAT",
+      "Fruit colour": "Greento dark green",
+      "Fruit Dimension": "12-14 x1.8-2 cm’s",
+      "Fruit Surface": "Smooth",
+      "Product Slot": "Anaheim",
+      "Market Slot": "Kranti, Meenam 74",
+      "Special features": "GoodtolerancetoLCV,",
+      "Sowing Window": "Kharif, Late kharif"
+    }
+  },
+  {
+    "crop": "Hot Pepper",
+    "variety": "Shikhar",
+    "specs": {
+      "1st Harvest": "50-55 DAT",
+      "Fruit colour": "Light Green",
+      "Fruit Dimension": "8.5-9 x 1cm’s",
+      "Fruit Surface": "Smooth",
+      "Product Slot": "SHP",
+      "Market Slot": "Hyveg-78",
+      "Special features": "GoodtolerancetoLCV,",
+      "Sowing Window": "Kharif, late kharif"
+    }
+  },
+  {
+    "crop": "Hot Pepper",
+    "variety": "Bhairav",
+    "specs": {
+      "1st Harvest": "50-55 DAT",
+      "Fruit colour": "Green",
+      "Fruit Dimension": "8-9   x   1 . 1-1.2cm’s",
+      "Fruit Surface": "Semi wrinkles",
+      "Product Slot": "SHP",
+      "Market Slot": "NS 1701 DG",
+      "Special features": "Good cold set,",
+      "Sowing Window": "Kharif, late kharif"
+    }
+  },
+  {
+    "crop": "Hot Pepper",
+    "variety": "VHPH 172",
+    "specs": {
+      "1st Harvest": "50-55 DAT",
+      "Fruit colour": "Light Green",
+      "Fruit Dimension": "10-12 x 2.8-3.2",
+      "Fruit Surface": "Smooth",
+      "Product Slot": "Anaheim",
+      "Market Slot": "Excel 502",
+      "Special features": "GoodtolerancetoLCV,",
+      "Sowing Window": "Kharif, late kharif"
+    }
+  },
+  {
+    "crop": "Hot Pepper",
+    "variety": "VHPH 862",
+    "specs": {
+      "1st Harvest": "40-45 DAT",
+      "Fruit colour": "Green",
+      "Fruit Dimension": "12-14 x 3.5-3.8",
+      "Fruit Surface": "Semi wrinkle",
+      "Product Slot": "Anaheim",
+      "Market Slot": "VNR 38,Excel 502,US 730",
+      "Special features": "Early picking, Good yield",
+      "Sowing Window": "Kharif, late kharif"
+    }
+  },
+  {
+    "crop": "Hot Pepper",
+    "variety": "VHPH- 1014",
+    "specs": {
+      "1st Harvest": "45-50 DAT",
+      "Fruit colour": "Dark Green",
+      "Fruit Dimension": "8.5-9-0.9-1 cm’s",
+      "Fruit Surface": "Semi wrinkle",
+      "Product Slot": "SHP-Fresh",
+      "Market Slot": "VNR 60-13",
+      "Special features": "Close bearing, Dark",
+      "Sowing Window": "Kharif, late kharif"
+    }
+  },
+  {
+    "crop": "Hot Pepper",
+    "variety": "VHPH- 954",
+    "specs": {
+      "1st Harvest": "50-55 DAT",
+      "Fruit colour": "Dark Green",
+      "Fruit Dimension": "8.5-9 x 0.9-1 cm’s",
+      "Fruit Surface": "Semi wrinkle",
+      "Product Slot": "SHP",
+      "Market Slot": "Eagle/Pride, Talwar",
+      "Special features": "GoodtolerancetoLCV,",
+      "Sowing Window": "Kharif, late kharif"
+    }
+  },
+  {
+    "crop": "Hot Pepper",
+    "variety": "Samarth",
+    "specs": {
+      "1st Harvest": "45-50 DAT",
+      "Fruit colour": "Green",
+      "Fruit Dimension": "9-9.5 x 1.1-1.2",
+      "Fruit Surface": "Smooth",
+      "Product Slot": "Cayenne",
+      "Market Slot": "Bharti, UG 8307",
+      "Special features": "Close bearing,",
+      "Sowing Window": "Kharif, late kharif"
+    }
+  },
+  {
+    "crop": "Hot Pepper",
+    "variety": "V-5",
+    "specs": {
+      "1st Harvest": "45 DAT/55-60 days",
+      "Fruit colour": "Dark green/Deep red",
+      "Fruit Dimension": "9-9.5 x 1.4-1.5",
+      "Fruit Surface": "Semi wrinkle",
+      "Product Slot": "Red dry",
+      "Market Slot": "Indum 5",
+      "Special features": "Good ASTA,",
+      "Sowing Window": "Kharif, late kharif"
+    }
+  },
+  {
+    "crop": "Hot Pepper",
+    "variety": "Sara -2117",
+    "specs": {
+      "1st Harvest": "45 DAT",
+      "Fruit colour": "Green to dark green",
+      "Fruit Dimension": "20-22 x 1.4-1.5",
+      "Fruit Surface": "Semi wrinkle",
+      "Product Slot": "Cayenne",
+      "Market Slot": "Diana, calyx 303",
+      "Special features": "GoodtolerancetoLCV,",
+      "Sowing Window": "",
+      "Days to first picking": "55-60 DAT",
+      "Fruit Shape": "Blocky, 3-4 lobed",
+      "Fruit Weight": "140-150gm",
+      "Fruit Length": "6-8 cm",
+      "Recommendation": "All over India",
+      "Market Segment": "sSyngenta -Indra"
+    }
+  },
+  {
+    "crop": "Capsicum",
+    "variety": "Bella",
+    "specs": {
+      "Fruit colour": "",
+      "Calyx colour": "Green",
+      "Fruit Shape": "Oval round",
+      "Fruit Weight": "200-225 gm",
+      "Special features": "Tolerant to BW",
+      "MarketSegment": ""
+    }
+  },
+  {
+    "crop": "Eggplant",
+    "variety": "Dhawan",
+    "specs": {}
+  },
+  {
+    "crop": "Egg Plant",
+    "variety": "Romiyo",
+    "specs": {
+      "Fruit colour": "",
+      "Calyx colour": "Green",
+      "Fruit Shape": "Oval",
+      "Fruit Weight": "70-80 gm",
+      "Special features": "Cluster Bearing",
+      "MarketSegment": ""
+    }
+  },
+  {
+    "crop": "Egg Plant",
+    "variety": "Subhadra",
+    "specs": {
+      "Fruit colour": "and typeLight Green,half long",
+      "Calyx colour": "Green",
+      "Fruit Shape": "Oblong",
+      "Fruit Weight": "100-110gm",
+      "Special features": "Tolerant to BW",
+      "Market Segment": "",
+      "Fruit Dimension": "16-18 cm",
+      "Recommendation": "KT major and all over"
+    }
+  },
+  {
+    "crop": "Egg Plant",
+    "variety": "Vriddhi",
+    "specs": {
+      "Fruit colour": "and typePurple, halflong",
+      "Fruit Dimension": "18-20 cm",
+      "Fruit Weight": "100-120gm",
+      "Special Characteristics": "Cluster bearing, high yielding",
+      "Recommendation": "RJ, MP, UP, GJ, HR, PB",
+      "Market Segment": "BE-706 Type, Ankur -784"
+    }
+  },
+  {
+    "crop": "Egg Plant",
+    "variety": "Kaushalya",
+    "specs": {}
+  },
+  {
+    "crop": "Eggplant",
+    "variety": "Indigo",
+    "specs": {
+      "Fruit colour": "and typeBlack, oval round",
+      "Fruit Weight": "200-250 gm",
+      "Special Characteristics": "High yielding",
+      "Recommendation": "RJ, MP, UP, GJ, HR, PB",
+      "Market Segment": "Reema 32-Hyveg, Sandhya"
+    }
+  },
+  {
+    "crop": "Eggplant",
+    "variety": "Shaurya",
+    "specs": {
+      "Fruit colour": "Dark Purple",
+      "Fruit Dimension": "16-18 cm",
+      "Fruit Weight": "90-100gm",
+      "Special Characteristics": "High yielding",
+      "Recommendation": "RJ, MP, UP, GJ, HR, PB",
+      "Market Segment": "Seminis – Shyamli",
+      "Fruit Shape": "Half long",
+      "Special features": "Early bearing, good"
+    }
+  },
+  {
+    "crop": "Eggplant",
+    "variety": "Saloni",
+    "specs": {
+      "Fruit colour": "Black",
+      "Fruit Shape": "Half long",
+      "Fruit Weight": "120-130gm",
+      "Special features": "",
+      "Market Segment": "Hyveg – Kavya,"
+    }
+  },
+  {
+    "crop": "Eggplant",
+    "variety": "Black Beauty",
+    "specs": {
+      "Fruit colour": ", Good yielding.",
+      "Calyx colour": "Green",
+      "Fruit Shape": "Round",
+      "Fruit Weight": "200-250 gm",
+      "Special features": "",
+      "Market Segment": ""
+    }
+  },
+  {
+    "crop": "Eggplant",
+    "variety": "VBH-129",
+    "specs": {
+      "Fruit colour": "Dark purple",
+      "Calyx colour": "",
+      "Fruit Shape": "Oval to Round",
+      "Fruit Weight": "70-80 gm",
+      "Special features": "Good cluster bearing",
+      "Market Segment": ""
+    }
+  },
+  {
+    "crop": "Eggplant",
+    "variety": "Chhutki",
+    "specs": {
+      "Fruit colour": "Purplevariegated",
+      "Calyx colour": "Green",
+      "Fruit Shape": "Oval",
+      "Fruit Weight": "70-90 gm",
+      "Special features": "",
+      "Market Segment": ""
+    }
+  },
+  {
+    "crop": "Eggplant",
+    "variety": "Rangeela",
+    "specs": {
+      "Fruit colour": "Dark Purple",
+      "Calyx colour": "Green",
+      "Fruit Shape": "Oval to Round",
+      "Fruit Weight": "200-250gm",
+      "Special features": "Tolerant to BW",
+      "Market Segment": ""
+    }
+  },
+  {
+    "crop": "Eggplant",
+    "variety": "Neelabh",
+    "specs": {
+      "Fruit colour": "",
+      "Fruit Shape": "Halflong",
+      "Fruit Weight": "80-100gm",
+      "Special features": "Tolerant to BW",
+      "Market Segment": ""
+    }
+  },
+  {
+    "crop": "Eggplant",
+    "variety": "Hiral",
+    "specs": {
+      "Fruit colour": "and typeGlossy Dark Green",
+      "Fruit Dimension": "14-15cm",
+      "Plant Type": "Dwarfwith short",
+      "Special features": "YVMV & ELCV Tolerant",
+      "Recommendation": "All India",
+      "Market Segment": "Raadhika(UPL),"
+    }
+  },
+  {
+    "crop": "Okra",
+    "variety": "Mastani",
+    "specs": {
+      "Fruit colour": "Dark Green",
+      "Fruit Dimension": "14-15cm",
+      "Plant Type": "Dwarfwith short",
+      "Special Characteristics": "No yellow rings on fruits",
+      "Recommendation": "North, Central and",
+      "Market Segment": "UPL – Radhika, Kaveri-"
+    }
+  },
+  {
+    "crop": "Okra",
+    "variety": "Mrityunjay",
+    "specs": {
+      "Fruit colour": "and typeDark Green",
+      "Fruit Dimension": "14-16cm",
+      "Special Characteristics": "No yellow rings,",
+      "Recommendation": "North, Central and South",
+      "Market Segment": "NS-862"
+    }
+  },
+  {
+    "crop": "Okra",
+    "variety": "Revathi",
+    "specs": {}
+  },
+  {
+    "crop": "Okra",
+    "variety": "Revathi Plus",
+    "specs": {
+      "Fruit colour": "Dark Green",
+      "Fruit Dimension": "14-15cm",
+      "Special Characteristics": "No yellow rings,",
+      "Recommendation": "North, Central and",
+      "Market Segment": "VNR-Deepika"
+    }
+  },
+  {
+    "crop": "Okra",
+    "variety": "Soni",
+    "specs": {
+      "Days to Maturity": "65-70 DAS",
+      "Cob length": "20-22cm",
+      "Brix": "15-16 %",
+      "Recommendation": "MP, MH, OD, UP, PB,"
+    }
+  },
+  {
+    "crop": "Sweet corn",
+    "variety": "Sugar Candy",
+    "specs": {
+      "Market Segment": "Hyveg -"
+    }
+  },
+  {
+    "crop": "Cauliflower",
+    "variety": "Vishnu",
+    "specs": {
+      "Days to first picking": "70-80 DAS",
+      "Recommendation": "All Over India",
+      "MarketSegment": "Advanta-Sikander"
+    }
+  },
+  {
+    "crop": "Beet Root",
+    "variety": "Rubellite",
+    "specs": {
+      "Days to harvest": "45-50 DAS",
+      "Root Color": "White",
+      "Root shape": "cylindrical tapering",
+      "Root Length": "35-40 cm",
+      "Recommendation": "North and Central India",
+      "MarketSegment": "Syngenta- Ivory White"
+    }
+  },
+  {
+    "crop": "Radish",
+    "variety": "Hans",
+    "specs": {
+      "Days to harvest": "32-35 Days",
+      "Root Color": "White",
+      "Root shape": "cylindrical tapering",
+      "Root Length": "28-30 cm",
+      "Recommendation": "North and Central India",
+      "MarketSegment": "Somani – Farrata, X-"
+    }
+  },
+  {
+    "crop": "Radish",
+    "variety": "Vachan 33",
+    "specs": {}
+  },
+  {
+    "crop": "Dolichos Bean",
+    "variety": "Vachan sem-3",
+    "specs": {
+      "Days to first picking": "60-65 DAS",
+      "Pod Colour": "Green",
+      "Pod Shape": "Flat and Curved",
+      "Plant growth habit": "Bush Type",
+      "Recommendation": "All over India"
+    }
+  },
+  {
+    "crop": "Dolichos Bean",
+    "variety": "Pragati",
+    "specs": {
+      "Days to first picking": "60-65 DAS",
+      "Pod Colour": "Light green",
+      "Pod Shape": "Semi flat and curved",
+      "Plant growth habit": "Creeper",
+      "Recommendation": "All Over India"
+    }
+  },
+  {
+    "crop": "Dolichos Bean",
+    "variety": "Selvi- 43",
+    "specs": {
+      "Days to first picking": "70-75 DAS",
+      "Pod Colour": "Shiny Green",
+      "No. of seeds per pod": "9 – 10 seeds",
+      "Recommendation": "All over India",
+      "MarketSegment": ""
+    }
+  },
+  {
+    "crop": "Pea",
+    "variety": "Green Dew",
+    "specs": {
+      "Days to first picking": "75-80 DAS",
+      "Recommendation": "All Over India"
+    }
+  },
+  {
+    "crop": "Beet Root",
+    "variety": "Red Glory",
+    "specs": {
+      "Days to harvest": "40-45DAS",
+      "Root Color": "Attractive White",
+      "Root shape": "cylindrical tapering",
+      "Root Weight": "600-700 gm",
+      "Root Length": "30-35 cm",
+      "Recommendation": "North and Central India"
+    }
+  },
+  {
+    "crop": "Radish",
+    "variety": "Early Mino White",
+    "specs": {
+      "Days to harvest": "35-40 DAS",
+      "Root Color": "Attractive White",
+      "Root shape": "CylindricalTapering",
+      "Root Weight": "200-250 gm",
+      "Root Length": "18-20cm",
+      "Recommendation": "All over India"
+    }
+  },
+  {
+    "crop": "Radish",
+    "variety": "Chetki Long",
+    "specs": {
+      "Days to harvest": "30-35 DAS",
+      "Root Color": "Attractive White",
+      "Root shape": "Cylindrical Tapering",
+      "Root Weight": "250-300 gm",
+      "Root Length": "18-20cm",
+      "Recommendation": "All over India"
+    }
+  },
+  {
+    "crop": "Radish",
+    "variety": "Cheki Palak Patta",
+    "specs": {
+      "Days to first picking": "40-45 DAS",
+      "Plant growth habit": "Bush",
+      "Pod Colour": "Green",
+      "Pod Length": "24-26cm",
+      "Recommendation": "All over India",
+      "MarketSegment": ""
+    }
+  },
+  {
+    "crop": "Cowpea",
+    "variety": "Najuka",
+    "specs": {}
+  },
+  {
+    "crop": "Cowpea Pole (Green)",
+    "variety": "Harihar",
+    "specs": {
+      "Pod Colour": "Light Green",
+      "Pod Length": "50-60 cm",
+      "Recommendation": "All over India",
+      "Remark": "Stacking required",
+      "MarketSegment": ""
+    }
+  },
+  {
+    "crop": "Cowpea",
+    "variety": "Sheetal",
+    "specs": {}
+  },
+  {
+    "crop": "Cowpea Bush (Red)",
+    "variety": "Rosey",
+    "specs": {
+      "Days to first picking": "50-55 DAS",
+      "Plant growth habit": "Pole type",
+      "Pod Colour": "Reddish brown",
+      "Pod Length": "32-35cm",
+      "Recommendation": "All over India",
+      "Remark": "Stacking required",
+      "MarketSegment": ""
+    }
+  },
+  {
+    "crop": "Cowpea",
+    "variety": "Rudraksh",
+    "specs": {
+      "Days to first picking": "45-50 DAS",
+      "Fruit colour": "Dark Green",
+      "Fruit Shape": "Pentagonal",
+      "Fruit Length": "12-14 cm",
+      "Recommendation": "All over India",
+      "MarketSegment": ""
+    }
+  },
+  {
+    "crop": "Okra",
+    "variety": "Neelam",
+    "specs": {
+      "Days to first picking": "65-70 DAT",
+      "Plant Type": "Semi Determinate",
+      "Fruit colour": "Red",
+      "Fruit Shape": "Round",
+      "Fruit Weight": "80-90 gm",
+      "Disease tolerance": "High tolerance to TLCV",
+      "MarketSegment": ""
+    }
+  },
+  {
+    "crop": "Tomato",
+    "variety": "Amar",
+    "specs": {}
+  },
+  {
+    "crop": "Cucumber",
+    "variety": "Gauri",
+    "specs": {
+      "Days to first picking": "55-60 DAS",
+      "Fruit colour": "Mottled Green",
+      "Fruit Shape": "Cylindrical",
+      "Fruit Weight": "200-220 gm",
+      "Fruit Length": "18-20 cm",
+      "Market Segment": "Pahuja, RK Seeds",
+      "Recommendation": "UP, OD, JH, BR, WB",
+      "Special features": "Good heat set, Desi taste,"
+    }
+  },
+  {
+    "crop": "French Bean",
+    "variety": "Rupali",
+    "specs": {
+      "Days to first picking": "50-55 DAS",
+      "Pod Colour": "Attractive green",
+      "Pod Length": "12-15 cm",
+      "Pod Shape": "Straight cylindrical",
+      "Market Segment": "Falguni",
+      "Special features": "Good tolerance to viral &"
+    }
+  },
+  {
+    "crop": "French Bean",
+    "variety": "Snehal",
+    "specs": {
+      "Days to first picking": "50-55 DAS",
+      "Pod Colour": "Attractive green",
+      "Pod Length": "12-15 cm",
+      "Pod Shape": "Straight cylindrical",
+      "Market Segment": "Ruby-Indus,",
+      "Special features": "Good tolerance to viral &"
+    }
+  },
+  {
+    "crop": "Maize",
+    "variety": "Angad - 1217",
+    "specs": {
+      "No of Kernel Rows": "16-18",
+      "Grains per row": "38-40",
+      "Kernal Texture": "Semi flint",
+      "Kernal Colour": "Orangeyellow",
+      "Tip filling": "100 %",
+      "Plant Height": "210-220 cm",
+      "Yield potential": "Excellent"
+    }
+  },
+  {
+    "crop": "Maize",
+    "variety": "Gaja-31",
+    "specs": {
+      "No of Kernel Rows": "16-18",
+      "Grains per row": "34-36",
+      "Kernal Texture": "Semi flint",
+      "Kernal Colour": "Orange",
+      "Tip filling": "100 %",
+      "Plant Height": "220-225 cm",
+      "Yield potential": "Excellent"
+    }
+  },
+  {
+    "crop": "Maize",
+    "variety": "Vijay",
+    "specs": {
+      "No of Kernel Rows": "16-18",
+      "Grains per row": "34-36",
+      "Kernal Texture": "Semi flint",
+      "Kernal Colour": "Orangeyellow",
+      "Tip filling": "100 %",
+      "Plant Height": "200-210 cm",
+      "Yield potential": "Excellent"
+    }
+  },
+  {
+    "crop": "Mustard",
+    "variety": "V -111",
+    "specs": {
+      "Pod Length": "cm5-6 cm",
+      "Yield potential": "Excellent",
+      "Oil %": "41-43 %",
+      "Recommended": "statesPB,HR,UP,RJ,BR,OD,WB,AS,"
+    }
+  }
+]

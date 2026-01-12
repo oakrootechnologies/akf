@@ -162,6 +162,17 @@ export default function OptimizedVideo({
           setHasError(true)
           onError?.()
         }}
+        onContextMenu={(e) => e.preventDefault()}
+        onDragStart={(e) => e.preventDefault()}
+        draggable={false}
+        style={{
+          userSelect: 'none',
+          WebkitUserSelect: 'none' as any,
+          MozUserSelect: 'none' as any,
+          msUserSelect: 'none' as any,
+          WebkitUserDrag: 'none' as any,
+          userDrag: 'none' as any,
+        } as unknown as React.CSSProperties}
       >
         {shouldLoad && (
           <>
@@ -200,6 +211,17 @@ export default function OptimizedVideo({
             alt="Video poster"
             className="w-full h-full object-cover opacity-50"
             loading="lazy"
+            onContextMenu={(e) => e.preventDefault()}
+            onDragStart={(e) => e.preventDefault()}
+            draggable={false}
+            style={{
+              userSelect: 'none',
+              WebkitUserSelect: 'none' as any,
+              MozUserSelect: 'none' as any,
+              msUserSelect: 'none' as any,
+              WebkitUserDrag: 'none' as any,
+              userDrag: 'none' as any,
+            } as unknown as React.CSSProperties}
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="bg-white/90 rounded-full p-4">

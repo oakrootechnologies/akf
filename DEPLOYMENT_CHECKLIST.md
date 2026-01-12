@@ -84,7 +84,7 @@ After upload, check that these files exist in `public_html`:
 
 ## 🧪 Testing After Deployment
 
-1. **Homepage**: Visit `https://oksingreen.com`
+1. **Homepage**: Visit (to be provided)
    - Check if images load
    - Check if navigation works
    - Check if hero slider works

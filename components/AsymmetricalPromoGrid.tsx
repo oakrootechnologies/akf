@@ -1,20 +1,25 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
-import { Play, X } from 'lucide-react'
+import { useState, useEffect, useRef } from 'react'
+import Link from 'next/link'
+import { Calendar, Clock } from 'lucide-react'
 
 export default function AsymmetricalPromoGrid() {
-  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
   const [isVisible, setIsVisible] = useState(false)
   const [hasAnimated, setHasAnimated] = useState(false)
 
-  const openVideoModal = () => {
-    setIsVideoModalOpen(true)
-  }
-
-  const closeVideoModal = () => {
-    setIsVideoModalOpen(false)
+  // Helper function to format date to Latest News style
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString)
+    const day = date.getDate().toString()
+    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    const month = monthNames[date.getMonth()]
+    const year = date.getFullYear()
+    return {
+      day,
+      monthYear: `${month}-${year}`
+    }
   }
 
   useEffect(() => {
@@ -42,187 +47,218 @@ export default function AsymmetricalPromoGrid() {
     }
   }, [hasAnimated])
 
+  const blogs = [
+    {
+      id: 1,
+      slug: 'the-green-gold-rush',
+      title: "The Green Gold Rush: How Horticulture & Agroforestry Decrease Carbon Consumption and Attract Smart Investment",
+      excerpt: "Discover how horticulture and agroforestry are transforming agriculture into a carbon-capture technology. Learn how these practices decrease carbon consumption, create profitable opportunities for farmers, and attract smart investment in the growing ESG market.",
+      mainImage: "/realblog/1 MAIN.webp",
+      date: "November 29, 2025",
+      readTime: "8 min read",
+      category: "Horticulture"
+    },
+    {
+      id: 2,
+      slug: 'beyond-the-harvest',
+      title: "Beyond the Harvest: Why Healthy Soil is Horticulture's Greatest Long-Term Asset",
+      excerpt: "Discover why healthy soil is not just dirt, but a living ecosystem that's horticulture's greatest long-term asset. Learn how building soil health creates drought resilience, natural pest control, and a profitable foundation for sustainable farming.",
+      mainImage: "/realblog/2 MAIN.png",
+      date: "November 29, 2025",
+      readTime: "10 min read",
+      category: "Agroforestry"
+    },
+    {
+      id: 3,
+      slug: 'traditional-vs-horticulture-farming',
+      title: "Is a 1-Acre Garden Worth More Than a 100-Acre Field?",
+      excerpt: "Discover the shocking truth about yield and value comparison between traditional farming and horticulture. Learn how a 1-acre garden can produce 10-100x more food than a traditional field and why value is starting to win over volume.",
+      mainImage: "/realblog/3 MAIN.JPG",
+      date: "November 29, 2025",
+      readTime: "12 min read",
+      category: "Farming Methods"
+    }
+  ]
+
   return (
-    <>
-      <section ref={sectionRef} className="py-16 bg-white">
-        <div className="w-full max-w-[1238px] mx-auto px-4">
-          <div className="origin-top scale-[0.8]">
-            {/* Main Grid Container */}
-            <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-8 w-full">
-            
-            {/* Grid Cell 1 (Top-Left): Plant Image */}
-            <div className={`relative flex items-center justify-center bg-gray-50 rounded-lg overflow-hidden w-full aspect-[4/3] ${isVisible ? 'slide-in-left' : 'slide-in-left-initial'}`}>
-              {/* Leaf Background Graphic */}
-              <div 
-                className="absolute inset-0 opacity-10"
-                style={{
-                  backgroundImage: `url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNMTUwIDEwMEMxNTAgNTAgMjAwIDUwIDIwMCAxMDBDMjAwIDE1MCAxNTAgMTUwIDE1MCAxMDBaIiBmaWxsPSIjMjJjNTVlIiBvcGFjaXR5PSIwLjMiLz4KICA8cGF0aCBkPSJNMjAwIDE1MEMyMDAgMTAwIDI1MCAxMDAgMjUwIDE1MEMyNTAgMjAwIDIwMCAyMDAgMjAwIDE1MFoiIGZpbGw9IiMyMmM1NWUiIG9wYWNpdHk9IjAuMiIvPgogIDxwYXRoIGQ9Ik0xMDAgMjAwQzEwMCAxNTAgMTUwIDE1MCAxNTAgMjAwQzE1MCAyNTAgMTAwIDI1MCAxMDAgMjAwWiIgZmlsbD0iIzIyYzU1ZSIgb3BhY2l0eT0iMC4yNSIvPgogIDxwYXRoIGQ9Ik0yNTAgMjUwQzI1MCAyMDAgMzAwIDIwMCAzMDAgMjUwQzMwMCAzMDAgMjUwIDMwMCAyNTAgMjUwWiIgZmlsbD0iIzIyYzU1ZSIgb3BhY2l0eT0iMC4xNSIvPgogIDxwYXRoIGQ9Ik0xNTAgMzAwQzE1MCAyNTAgMjAwIDI1MCAyMDAgMzAwQzIwMCAzNTAgMTUwIDM1MCAxNTAgMzAwWiIgZmlsbD0iIzIyYzU1ZSIgb3BhY2l0eT0iMC4yIi8+Cjwvc3ZnPg==')`,
-                  backgroundSize: 'contain',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center'
-                }}
-              />
-              
-              {/* Plant Image */}
+    <section ref={sectionRef} className="relative z-30 bg-transparent py-16">
+      <div className="w-full max-w-[990px] mx-auto px-4">
+        {/* Single Card Container */}
+        <div className={`relative transition-all duration-[3000ms] ease-out ${
+          isVisible 
+            ? 'translate-y-0 opacity-100' 
+            : 'translate-y-20 opacity-0'
+        }`}>
+          <div className="bg-white rounded-lg shadow-2xl p-6 md:p-8 lg:p-12 xl:p-16">
+            {/* Section Header */}
+            <div className="text-center mb-8 md:mb-12">
+              {/* Leaf Icon */}
+              <div className="flex justify-center mb-3 md:mb-4">
               <img
-                src="https://placehold.co/400x400/F5F5F5/333?text=Wall+Plant"
-                alt="Wall Plant"
-                className="relative z-10 w-full h-full object-cover transform scale-110"
-                loading="lazy"
-                decoding="async"
+                  src="/logo/Agrikrishifarms.jpg"
+                  alt="Agrikrishi Farms Logo"
+                  className="w-12 h-12 md:w-16 lg:w-20 md:h-16 lg:h-20 object-contain mx-auto"
               />
             </div>
 
-            {/* Grid Cell 2 (Top-Right): Text Block 1 */}
-            <div className={`flex items-center justify-center p-8 ${isVisible ? 'slide-in-left delay-200' : 'slide-in-left-initial delay-200'}`}>
-              <div className="text-left max-w-md">
-                <h3 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
-                  Nutrients Plant Collection
-                </h3>
-                <p className="text-xl text-gray-600 mb-6">
-                  Get 50% OFF On This Month
+              {/* Main Title */}
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
+                Blogs
+              </h2>
+              
+              {/* Subtitle with decorative lines */}
+              <div className="flex items-center justify-center gap-2 md:gap-3">
+                <div className="h-px w-6 md:w-8 bg-gray-300"></div>
+                <p className="text-gray-500 uppercase tracking-wider text-xs md:text-sm font-sans">
+                  OUR PLANT HOUSE
                 </p>
-                <button className="bg-green-500 hover:bg-green-600 text-white px-9 py-3 rounded-full font-semibold transition-colors duration-300 text-base">
-                  Read More
-                </button>
+                <div className="h-px w-6 md:w-8 bg-gray-300"></div>
               </div>
             </div>
 
-            {/* Grid Cell 3 (Bottom-Left): Text Block 2 */}
-            <div className={`flex items-center justify-center p-8 ${isVisible ? 'slide-in-right delay-400' : 'slide-in-right-initial delay-400'}`}>
-              <div className="text-left max-w-md">
-                <h3 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
-                  New In Trend
+            {/* Blog Posts - Vertical Stack */}
+            <div className="space-y-6 md:space-y-8 lg:space-y-12">
+              {/* Post 1 - Image Left, Text Right */}
+              <Link href={`/blogs/${blogs[0].slug}`} className="group block">
+                <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+                  {/* Image */}
+                  <div className="w-full md:w-1/2">
+                    <img
+                      src={blogs[0].mainImage}
+                      alt={blogs[0].title}
+                      className="w-full h-auto min-h-[180px] md:min-h-[200px] lg:min-h-[300px] object-cover rounded-lg group-hover:scale-105 transition-transform duration-700"
+                      width={600}
+                      height={400}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  
+                  {/* Text Content */}
+                  <div className="w-full md:w-1/2 flex flex-col justify-center">
+                    {/* Date Block */}
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-4xl font-bold text-gray-300 leading-none">
+                        {formatDate(blogs[0].date).day}
+                      </span>
+                      <span className="bg-black text-white text-xs font-medium px-2 py-1 rounded">
+                        {formatDate(blogs[0].date).monthYear}
+                      </span>
+                    </div>
+                    
+                    {/* Title */}
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
+                      {blogs[0].title}
                 </h3>
-                <p className="text-base text-gray-600 mb-6 leading-relaxed">
-                  Niventore Veritatis Et Quasi Architecto Beatae Dicta Sun Explicabo. Nemo Enim Ipsum Volup...
-                </p>
-                <button 
-                  onClick={openVideoModal}
-                  className="bg-green-500 hover:bg-green-600 text-white px-9 py-3 rounded-full font-semibold transition-colors duration-300 text-base"
-                >
-                  Watch Now
-                </button>
+                    
+                    {/* Excerpt */}
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                      {blogs[0].excerpt}
+                    </p>
+                    
+                    {/* Read More Link */}
+                    <span className="inline-block text-gray-900 font-semibold group-hover:text-primary-600 transition-colors text-sm">
+                      Read More &gt;
+                    </span>
               </div>
             </div>
+              </Link>
 
-            {/* Grid Cell 4 (Bottom-Right): Video Block */}
-            <div 
-              className={`relative flex items-center justify-center bg-gray-200 rounded-lg overflow-hidden cursor-pointer group w-full aspect-video ${isVisible ? 'slide-in-right delay-600' : 'slide-in-right-initial delay-600'}`}
-              onClick={openVideoModal}
-            >
-              {/* Video Thumbnail */}
-              <img
-                src="https://placehold.co/500x300/CCC/333?text=Video+Thumbnail"
-                alt="Video Thumbnail"
-                className="w-full h-full object-cover transform scale-110"
-                loading="lazy"
-                decoding="async"
-              />
+              {/* Post 2 - Image Right, Text Left */}
+              <Link href={`/blogs/${blogs[1].slug}`} className="group block">
+                <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+                  {/* Image */}
+                  <div className="w-full md:w-1/2 md:order-2">
+                    <img
+                      src={blogs[1].mainImage}
+                      alt={blogs[1].title}
+                      className="w-full h-auto min-h-[180px] md:min-h-[200px] lg:min-h-[300px] object-cover rounded-lg group-hover:scale-105 transition-transform duration-700"
+                      width={600}
+                      height={400}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
               
-              {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300" />
-              
-              {/* Play Button */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 bg-white bg-opacity-90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Play className="w-8 h-8 text-green-500 ml-1" fill="currentColor" />
+                  {/* Text Content */}
+                  <div className="w-full md:w-1/2 md:order-1 flex flex-col justify-center">
+                    {/* Date Block */}
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="bg-black text-white text-xs font-medium px-2 py-1 rounded">
+                        {formatDate(blogs[1].date).monthYear}
+                      </span>
+                      <span className="text-4xl font-bold text-gray-300 leading-none">
+                        {formatDate(blogs[1].date).day}
+                      </span>
+                    </div>
+                    
+                    {/* Title */}
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
+                      {blogs[1].title}
+                    </h3>
+                    
+                    {/* Excerpt */}
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                      {blogs[1].excerpt}
+                    </p>
+                    
+                    {/* Read More Link */}
+                    <span className="inline-block text-gray-900 font-semibold group-hover:text-primary-600 transition-colors text-sm">
+                      Read More &gt;
+                    </span>
+                  </div>
                 </div>
+              </Link>
+
+              {/* Post 3 - Image Left, Text Right */}
+              <Link href={`/blogs/${blogs[2].slug}`} className="group block">
+                <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+                  {/* Image */}
+                  <div className="w-full md:w-1/2">
+                    <img
+                      src={blogs[2].mainImage}
+                      alt={blogs[2].title}
+                      className="w-full h-auto min-h-[180px] md:min-h-[200px] lg:min-h-[300px] object-cover rounded-lg group-hover:scale-105 transition-transform duration-700"
+                      width={600}
+                      height={400}
+                      loading="lazy"
+                      decoding="async"
+                    />
               </div>
+                  
+                  {/* Text Content */}
+                  <div className="w-full md:w-1/2 flex flex-col justify-center">
+                    {/* Date Block */}
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-4xl font-bold text-gray-300 leading-none">
+                        {formatDate(blogs[2].date).day}
+                      </span>
+                      <span className="bg-black text-white text-xs font-medium px-2 py-1 rounded">
+                        {formatDate(blogs[2].date).monthYear}
+                      </span>
             </div>
+                    
+                    {/* Title */}
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
+                      {blogs[2].title}
+                    </h3>
+                    
+                    {/* Excerpt */}
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                      {blogs[2].excerpt}
+                    </p>
+                    
+                    {/* Read More Link */}
+                    <span className="inline-block text-gray-900 font-semibold group-hover:text-primary-600 transition-colors text-sm">
+                      Read More &gt;
+                    </span>
+            </div>
+          </div>
+              </Link>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Video Modal */}
-      {isVideoModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-          {/* Backdrop */}
-          <div 
-            className="absolute inset-0 bg-black bg-opacity-75"
-            onClick={closeVideoModal}
-          />
-          
-          {/* Modal Content */}
-          <div className="relative z-10 w-full max-w-4xl mx-4">
-            {/* Close Button */}
-            <button
-              onClick={closeVideoModal}
-              className="absolute -top-12 right-0 w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-300"
-            >
-              <X className="w-6 h-6 text-white" />
-            </button>
-            
-            {/* Video Player */}
-            <div className="relative w-full h-0 pb-[56.25%] bg-black rounded-lg overflow-hidden">
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-                title="Video Player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* CSS Animations */}
-      <style jsx global>{`
-        @keyframes slideInLeft {
-          from {
-            opacity: 0;
-            transform: translateX(-100px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        @keyframes slideInRight {
-          from {
-            opacity: 0;
-            transform: translateX(100px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        .slide-in-left-initial {
-          opacity: 0;
-          transform: translateX(-100px);
-        }
-
-        .slide-in-left {
-          animation: slideInLeft 2.4s ease-out forwards;
-        }
-
-        .slide-in-right-initial {
-          opacity: 0;
-          transform: translateX(100px);
-        }
-
-        .slide-in-right {
-          animation: slideInRight 2.4s ease-out forwards;
-        }
-
-        .delay-200 {
-          animation-delay: 0.6s;
-        }
-
-        .delay-400 {
-          animation-delay: 1.2s;
-        }
-
-        .delay-600 {
-          animation-delay: 1.8s;
-        }
-      `}</style>
-    </>
+      </div>
+    </section>
   )
 }

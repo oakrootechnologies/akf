@@ -6,9 +6,7 @@ import Footer from '@/components/Footer'
 import { ArrowLeft } from 'lucide-react'
 import { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination } from 'swiper/modules'
 import 'swiper/css'
-import 'swiper/css/pagination'
 
 export default function ProductPage() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -52,23 +50,17 @@ Agronomically, Mahogany is excellent for Agroforestry. In the first 3 to 4 years
 
       <div className="max-w-7xl mx-auto px-4 py-12">
         <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">
-          Plant Dedicated Page
+          {product.name}
         </h1>
 
         <div className="mb-12">
-          <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden bg-[#5F7C7E]">
+          <div className="relative w-[80%] mx-auto aspect-[16/9] rounded-2xl overflow-hidden bg-[#5F7C7E] flex items-center justify-center">
             <Swiper
-              modules={[Pagination]}
-              pagination={{ 
-                clickable: true,
-                bulletClass: 'swiper-pagination-bullet',
-                bulletActiveClass: 'swiper-pagination-bullet-active'
-              }}
               onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
-              className="h-full"
+              className="h-full w-full"
             >
               {product.images.map((image, index) => (
-                <SwiperSlide key={index}>
+                <SwiperSlide key={index} className="flex items-center justify-center">
                   <img
                     src={image}
                     alt={`${product.name} ${index + 1}`}
@@ -108,7 +100,7 @@ Agronomically, Mahogany is excellent for Agroforestry. In the first 3 to 4 years
           Benefits
         </h2>
 
-        <div className="border-2 border-gray-300 rounded-lg p-6 md:p-8 bg-white">
+        <div className="border-2 border-[#81ba00] rounded-lg p-6 md:p-8 bg-white">
           <div className="prose prose-lg max-w-none">
             <div className="whitespace-pre-line text-gray-800 leading-relaxed text-base md:text-lg">
               {product.benefits}
