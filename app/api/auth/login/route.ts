@@ -1,11 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
-
 import { otpStore } from '@/lib/otpStore'
 
-// In-memory storage for OTP is now imported
-// In production, consider using Redis or a database
-
 export async function POST(request: NextRequest) {
+  // MOCK LOGIN ROUTE
+  // Bypasses Twilio and real OTP generation for build safety
+
   try {
     const { phone } = await request.json()
 
@@ -16,54 +15,21 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Generate 6-digit OTP
-    const otp = Math.floor(100000 + Math.random() * 900000).toString()
-    const expiresAt = Date.now() + 60 * 1000 // 60 seconds expiry
+    // Determine a fake OTP
+    const otp = "123456";
+    const expiresAt = Date.now() + 60 * 1000
 
-    // Store OTP (hash it in production)
+    // Store in memory so verify route (if using store) can see it, 
+    // though verify is likely mocked too.
     otpStore.set(phone, { otp, expiresAt })
 
-    // Send OTP via Twilio
-    const twilioAccountSid = process.env.TWILIO_ACCOUNT_SID
-    const twilioAuthToken = process.env.TWILIO_AUTH_TOKEN
-    const twilioPhoneNumber = process.env.TWILIO_PHONE_NUMBER
-
-    if (!twilioAccountSid || !twilioAuthToken || !twilioPhoneNumber) {
-      console.error('Twilio credentials not configured')
-      // In development, log the OTP instead
-      if (process.env.NODE_ENV === 'development') {
-        console.log(`OTP for ${phone}: ${otp}`)
-        return NextResponse.json(
-          { message: 'OTP sent (check console in development)', otp },
-          { status: 200 }
-        )
-      }
-      return NextResponse.json(
-        { error: 'SMS service not configured' },
-        { status: 500 }
-      )
-    }
-
-    // Send SMS via Twilio
-    const twilio = require('twilio')(twilioAccountSid, twilioAuthToken)
-
-    await twilio.messages.create({
-      body: `Your OTP for login is: ${otp}. Valid for 60 seconds.`,
-      from: twilioPhoneNumber,
-      to: phone,
-    })
+    console.log(`MOCK OTP for ${phone}: ${otp}`);
 
     return NextResponse.json(
-      { message: 'OTP sent successfully' },
+      { message: 'OTP sent (MOCK: 123456)', otp },
       { status: 200 }
     )
-  } catch (error: any) {
-    console.error('Error sending OTP:', error)
-    return NextResponse.json(
-      { error: error.message || 'Failed to send OTP' },
-      { status: 500 }
-    )
+  } catch (err: any) {
+    return NextResponse.json({ error: err.message }, { status: 500 })
   }
 }
-
-

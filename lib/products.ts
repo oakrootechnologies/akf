@@ -1,55 +1,22 @@
 import { Product } from '@/models/Product'
+import { FALLBACK_INVENTORY } from './fallback-data'
+
+// MOCK PRODUCT FETCHER FOR STANDALONE DEMO
+// Directly returns fallback data instead of calling API endpoints.
 
 export async function fetchProducts(): Promise<Product[]> {
-  try {
-    const response = await fetch('/api/products', {
-      cache: 'no-store', // Always fetch fresh data
-    })
-    
-    if (!response.ok) {
-      throw new Error('Failed to fetch products')
-    }
-    
-    const data = await response.json()
-    return data.products || []
-  } catch (error) {
-    console.error('Error fetching products:', error)
-    return []
-  }
+  console.log('MOCK: fetchProducts returning fallback data');
+  return FALLBACK_INVENTORY as unknown as Product[];
 }
 
 export async function fetchProductById(id: string): Promise<Product | null> {
-  try {
-    const response = await fetch(`/api/products/${id}`, {
-      cache: 'no-store',
-    })
-    
-    if (!response.ok) {
-      return null
-    }
-    
-    const data = await response.json()
-    return data.product || null
-  } catch (error) {
-    console.error('Error fetching product:', error)
-    return null
-  }
+  console.log('MOCK: fetchProductById', id);
+  const product = FALLBACK_INVENTORY.find((p: any) => p._id === id);
+  return (product as unknown as Product) || null;
 }
 
 export async function fetchProductBySlug(slug: string): Promise<Product | null> {
-  try {
-    const response = await fetch(`/api/products/${slug}`, {
-      cache: 'no-store',
-    })
-    
-    if (!response.ok) {
-      return null
-    }
-    
-    const data = await response.json()
-    return data.product || null
-  } catch (error) {
-    console.error('Error fetching product:', error)
-    return null
-  }
+  console.log('MOCK: fetchProductBySlug', slug);
+  const product = FALLBACK_INVENTORY.find((p: any) => p.slug === slug);
+  return (product as unknown as Product) || null;
 }
