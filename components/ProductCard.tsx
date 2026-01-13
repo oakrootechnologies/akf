@@ -194,7 +194,7 @@ export default function ProductCard({
     </div>
   )
 
-  if (productSlug) {
+  if (productSlug || href) {
     return (
       <Link href={productUrl} className="block">
         {CardContent}
