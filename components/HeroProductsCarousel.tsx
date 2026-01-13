@@ -21,7 +21,8 @@ export default function HeroProductsCarousel() {
         "/Website Images/generated/vegetable_seeds.png"
       ],
       price: "",
-      rating: 5
+      rating: 5,
+      href: "/categories/vegetable-seeds"
     },
     {
       title: "Field & Cash Crops",
@@ -32,7 +33,8 @@ export default function HeroProductsCarousel() {
         "/Website Images/generated/field_crops.png"
       ],
       price: "",
-      rating: 5
+      rating: 5,
+      href: "/categories/field-cash-crops"
     },
     {
       title: "Fruit Plantation",
@@ -44,7 +46,8 @@ export default function HeroProductsCarousel() {
         "/Website Images/guava(Hero)/FB_IMG_1614582146811.jpg"
       ],
       price: "",
-      rating: 5
+      rating: 5,
+      href: "/categories/fruit-plantation"
     },
     {
       title: "Timber & Forestry",
@@ -55,7 +58,8 @@ export default function HeroProductsCarousel() {
         "/Website Images/Sandalwood(Hero)/tractor.jpeg"
       ],
       price: "",
-      rating: 5
+      rating: 5,
+      href: "/categories/timber-forestry"
     }
   ]
 
@@ -107,6 +111,7 @@ export default function HeroProductsCarousel() {
                     images_hover={product.images_hover}
                     price={product.price}
                     rating={product.rating}
+                    href={(product as any).href}
                   />
                 </div>
               </SwiperSlide>
