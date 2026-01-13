@@ -36,12 +36,14 @@ export default function ProductCard({
   startingPrice,
   cropType,
   isHybrid,
-  variants = []
+  variants = [],
+  href
 }: ProductCardProps & {
   startingPrice?: number
   cropType?: string
   isHybrid?: boolean
   variants?: any[]
+  href?: string
 }) {
   const [isHovered, setIsHovered] = useState(false)
 
@@ -87,12 +89,15 @@ export default function ProductCard({
   }
 
   const productSlug = getProductSlug(title)
-  const productUrl = productSlug ? `/products/${productSlug}` : '#'
+
+  // URL Logic: Use provided href, else build product URL, else #
+  const productUrl = href ? href : (productSlug ? `/products/${productSlug}` : '#')
+
   const isRedSandalwood = title === 'Red Sandalwood'
 
   const CardContent = (
     <div
-      className={`relative bg-white rounded-xl border border-gray-200 p-2 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group ${productSlug ? 'cursor-pointer' : ''}`}
+      className={`relative bg-white rounded-xl border border-gray-200 p-2 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group ${(productSlug || href) ? 'cursor-pointer' : ''}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
