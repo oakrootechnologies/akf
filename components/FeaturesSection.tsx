@@ -66,7 +66,7 @@ export default function FeaturesSection() {
   }, [hasAnimated])
 
   return (
-    <section ref={sectionRef} className="relative z-20 mt-0 pt-12 md:pt-56 pb-0 min-h-[800px] md:min-h-[1170px] overflow-hidden">
+    <section ref={sectionRef} className="relative z-20 mt-0 pt-12 md:pt-24 pb-0 min-h-[800px] md:min-h-[900px] overflow-hidden">
       {/* Background Layer with Dark Leafy Pattern - Shifted Downward */}
       <div
         className="absolute top-0 left-0 right-0 bottom-0 bg-cover bg-center bg-no-repeat"
@@ -77,11 +77,11 @@ export default function FeaturesSection() {
       <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/75" />
 
       {/* Constrained Content */}
-      <div className="relative z-30 max-w-7xl mx-auto px-4 md:px-8 lg:px-12 xl:px-16 pt-[40px] md:pt-[80px] lg:pt-[100px] xl:pt-[120px] pb-20">
+      <div className="relative z-30 max-w-7xl mx-auto px-4 md:px-8 lg:px-12 xl:px-16 pt-[40px] md:pt-[60px] pb-20">
         {/* Hero Products Carousel Removed */}
 
         {/* Welcome Title - Mobile adjustments */}
-        <div className="text-center mb-6 md:mb-4 mt-8 md:mt-[150px]">
+        <div className="text-center mb-6 md:mb-4 mt-8 md:mt-12">
           <h2 className="font-sans text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-2">
             Welcome To Agrikrishi Farms
           </h2>
