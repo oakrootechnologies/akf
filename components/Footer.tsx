@@ -115,13 +115,13 @@ export default function Footer() {
             <div>
               <h3 className="text-white font-bold mb-4 uppercase">Commercial Hybrids</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Bitter Gourd (Batuk / Vachan 208)</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Bottle Gourd (Sumo / Bhim)</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Tomato (Preetam / Abhilash)</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Chilli/Hot Pepper (Rocket / Bullet)</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Okra (Radhika / Mastani Type)</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Cucumber (Ria / Malini)</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Sponge Gourd (Samridhi)</a></li>
+                <li><a href="/products/bitter-gourd" className="text-gray-300 hover:text-white transition-colors">Bitter Gourd (Batuk / Vachan 208)</a></li>
+                <li><a href="/products/bottle-gourd" className="text-gray-300 hover:text-white transition-colors">Bottle Gourd (Sumo / Bhim)</a></li>
+                <li><a href="/products/tomato" className="text-gray-300 hover:text-white transition-colors">Tomato (Preetam / Abhilash)</a></li>
+                <li><a href="/products/hot-pepper" className="text-gray-300 hover:text-white transition-colors">Chilli/Hot Pepper (Rocket / Bullet)</a></li>
+                <li><a href="/products/okra" className="text-gray-300 hover:text-white transition-colors">Okra (Radhika / Mastani Type)</a></li>
+                <li><a href="/products/cucumber" className="text-gray-300 hover:text-white transition-colors">Cucumber (Ria / Malini)</a></li>
+                <li><a href="/products/sponge-gourd" className="text-gray-300 hover:text-white transition-colors">Sponge Gourd (Samridhi)</a></li>
               </ul>
             </div>
 
@@ -129,12 +129,12 @@ export default function Footer() {
             <div>
               <h3 className="text-white font-bold mb-4 uppercase">Field Crops & Cereals</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Maize Hybrid (Angad-1217)</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Maize (Gaja-31 / Vijay)</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Mustard (V-111)</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Sweet Corn (Sugar Candy)</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Watermelon (Honey Ball)</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Wheat (Lok-1 / Sharbati)</a></li>
+                <li><a href="/products/maize" className="text-gray-300 hover:text-white transition-colors">Maize Hybrid (Angad-1217)</a></li>
+                <li><a href="/products/maize" className="text-gray-300 hover:text-white transition-colors">Maize (Gaja-31 / Vijay)</a></li>
+                <li><a href="/products/mustard" className="text-gray-300 hover:text-white transition-colors">Mustard (V-111)</a></li>
+                <li><a href="/products/maize" className="text-gray-300 hover:text-white transition-colors">Sweet Corn (Sugar Candy)</a></li>
+                <li><a href="/products/watermelon" className="text-gray-300 hover:text-white transition-colors">Watermelon (Honey Ball)</a></li>
+                <li><a href="/products/wheat" className="text-gray-300 hover:text-white transition-colors">Wheat (Lok-1 / Sharbati)</a></li>
               </ul>
             </div>
           </div>
